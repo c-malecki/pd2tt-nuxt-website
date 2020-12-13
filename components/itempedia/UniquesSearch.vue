@@ -2,8 +2,13 @@
   <v-col>
     <div class="Itempedia-filter-container">
       <v-form>
-        <v-row>
-          <v-col>
+        <v-row dense>
+          <v-col xs="12" sm="12" md="6" lg="3" xl="3">
+            <v-text-field v-model="formValues.name" label="Name" />
+          </v-col>
+        </v-row>
+        <v-row dense>
+          <v-col xs="12" sm="12" md="6" lg="3" xl="3">
             <v-autocomplete
               v-model="formValues.type"
               :items="getTypes"
@@ -13,7 +18,7 @@
               clearable
             />
           </v-col>
-          <v-col>
+          <v-col xs="12" sm="12" md="6" lg="3" xl="3">
             <v-autocomplete
               v-model="formValues.tier"
               :items="formControl.tier"
@@ -23,7 +28,9 @@
               clearable
             />
           </v-col>
-          <v-col>
+        </v-row>
+        <v-row dense>
+          <v-col xs="12" sm="6" md="4" lg="2" xl="2">
             <v-autocomplete
               v-model="formValues.socketMin"
               :items="formControl.sockets"
@@ -31,7 +38,7 @@
               clearable
             />
           </v-col>
-          <v-col>
+          <v-col xs="12" sm="6" md="4" lg="2" xl="2">
             <v-autocomplete
               v-model="formValues.socketMax"
               :items="calcSocketMax"
@@ -39,7 +46,9 @@
               clearable
             />
           </v-col>
-          <v-col>
+        </v-row>
+        <v-row dense>
+          <v-col xs="12" sm="12" md="12" lg="6" xl="6">
             <v-autocomplete
               v-model="formValues.selectedStats"
               :items="formControl.stats"
@@ -83,6 +92,7 @@ export default {
     page: 1,
     allItems: [...uniques],
     formValues: {
+      name: "",
       type: undefined,
       tier: undefined,
       socketMin: undefined,
@@ -119,12 +129,16 @@ export default {
     filteredItems() {
       let items = this.allItems;
       const {
+        name,
         type,
         tier,
         socketMin,
         socketMax,
         selectedStats,
       } = this.formValues;
+      items = items.filter((obj) =>
+        obj.name.toLowerCase().includes(name.toLowerCase())
+      );
       if (type !== undefined) {
         items = items.filter((obj) => obj.type === type);
       }

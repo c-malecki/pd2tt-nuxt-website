@@ -2,44 +2,48 @@
   <v-col>
     <div class="Itempedia-filter-container">
       <v-form>
-        <v-row>
-          <v-col>
-            <v-autocomplete
-              v-model="formValues.type"
-              :items="getTypes"
-              label="Type"
-              item-text="name"
-              item-value="code"
-              clearable
-            />
-          </v-col>
-          <v-col>
-            <v-autocomplete
-              v-model="formValues.tier"
-              :items="formControl.tier"
-              label="Tier"
-              item-text="name"
-              item-value="code"
-              clearable
-            />
-          </v-col>
-          <v-col>
-            <v-autocomplete
-              v-model="formValues.socketMin"
-              :items="formControl.sockets"
-              label="Sockets Min"
-              clearable
-            />
-          </v-col>
-          <v-col>
-            <v-autocomplete
-              v-model="formValues.socketMax"
-              :items="calcSocketMax"
-              label="Sockets Max"
-              clearable
-            />
-          </v-col>
-        </v-row>
+        <v-container fluid>
+          <v-row dense>
+            <v-col xs="12" sm="12" md="6" lg="3" xl="3">
+              <v-autocomplete
+                v-model="formValues.type"
+                :items="getTypes"
+                label="Type"
+                item-text="name"
+                item-value="code"
+                clearable
+              />
+            </v-col>
+            <v-col xs="12" sm="12" md="6" lg="3" xl="3">
+              <v-autocomplete
+                v-model="formValues.tier"
+                :items="formControl.tier"
+                label="Tier"
+                item-text="name"
+                item-value="code"
+                clearable
+              />
+            </v-col>
+          </v-row>
+          <v-row dense>
+            <v-col xs="12" sm="6" md="4" lg="2" xl="2">
+              <v-autocomplete
+                v-model="formValues.socketMin"
+                :items="formControl.sockets"
+                label="Sockets Min"
+                clearable
+              />
+            </v-col>
+            <v-col xs="12" sm="6" md="4" lg="2" xl="2">
+              <v-autocomplete
+                v-model="formValues.socketMax"
+                :items="calcSocketMax"
+                label="Sockets Max"
+                clearable
+              />
+            </v-col>
+          </v-row>
+        </v-container>
       </v-form>
     </div>
     <v-pagination
