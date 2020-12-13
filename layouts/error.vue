@@ -37,6 +37,12 @@ export default {
 
 <style scoped>
 h1 {
-  font-size: 20px;
+  font-size: 26px;
+  text-align: center;
+}
+a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
 }
 </style>

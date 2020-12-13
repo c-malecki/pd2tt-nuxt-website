@@ -47,6 +47,11 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
+  generate: {
+    routes: ["/", "/itempedia"],
+    fallback: true,
+  },
+
   // Vuetify module configuration (https://go.nuxtjs.dev/config-vuetify)
   vuetify: {
     customVariables: ["~/assets/variables.scss", "~/assets/util-classes.scss"],
