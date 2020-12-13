@@ -1,0 +1,600 @@
+[
+  {
+    "name": "Ancients' Pledge",
+    "bases": [
+      "shie"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Black",
+    "bases": [
+      "club",
+      "hamm",
+      "mace"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Fury",
+    "bases": [
+      "mele"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Holy Thunder",
+    "bases": [
+      "scep"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Honor",
+    "bases": [
+      "mele"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "King's Grace",
+    "bases": [
+      "swor",
+      "scep"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Leaf",
+    "bases": [
+      "staf"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Lionheart",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Lore",
+    "bases": [
+      "helm"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Malice",
+    "bases": [
+      "mele"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Melody",
+    "bases": [
+      "miss"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Memory",
+    "bases": [
+      "staf"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Nadir",
+    "bases": [
+      "helm"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Radiance",
+    "bases": [
+      "helm"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Rhyme",
+    "bases": [
+      "shie"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Silence",
+    "bases": [
+      "weapon"
+    ],
+    "sock_req": 6
+  },
+  {
+    "name": "Smoke",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Stealth",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Steel",
+    "bases": [
+      "swor",
+      "axe",
+      "mace"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Strength",
+    "bases": [
+      "mele"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Venom",
+    "bases": [
+      "weapon"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Wealth",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "White",
+    "bases": [
+      "wand"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Zephyr",
+    "bases": [
+      "miss"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Chains of Honor",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Bramble",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Breath of the Dying",
+    "bases": [
+      "weapon"
+    ],
+    "sock_req": 6
+  },
+  {
+    "name": "Call to Arms",
+    "bases": [
+      "weapon"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "Crescent Moon",
+    "bases": [
+      "axe",
+      "swor",
+      "pole"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Delerium",
+    "bases": [
+      "helm"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Doom",
+    "bases": [
+      "axe",
+      "pole",
+      "hamm"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "Enigma",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Stone",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Eternity",
+    "bases": [
+      "mele"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "Exile",
+    "bases": [
+      "ashd"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Famine",
+    "bases": [
+      "axe",
+      "hamm",
+      "swor"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Hand of Justice",
+    "bases": [
+      "weapon"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Heart of the Oak",
+    "bases": [
+      "staf",
+      "mace"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Kingslayer",
+    "bases": [
+      "swor",
+      "axe"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Passion",
+    "bases": [
+      "weapon"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Gloom",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Sanctuary",
+    "bases": [
+      "shie"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Chaos",
+    "bases": [
+      "h2h", "h2h2"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Beast",
+    "bases": [
+      "axe",
+      "scep",
+      "hamm"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "Spirit",
+    "bases": [
+      "swor",
+      "shie"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Splendor",
+    "bases": [
+      "shie"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Duress",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Oath",
+    "bases": [
+      "swor",
+      "axe",
+      "mace"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Obedience",
+    "bases": [
+      "pole",
+      "spea"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "Harmony",
+    "bases": [
+      "miss"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Fortitude",
+    "bases": [
+      "weapon",
+      "tors"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Faith",
+    "bases": [
+      "miss"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Bone",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Brand",
+    "bases": [
+      "miss"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Death",
+    "bases": [
+      "swor",
+      "axe"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "Destruction",
+    "bases": [
+      "pole",
+      "swor",
+      "spea"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "Dragon",
+    "bases": [
+      "tors",
+      "shie"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Dream",
+    "bases": [
+      "helm",
+      "shie"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Edge",
+    "bases": [
+      "miss"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Enlightenment",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Ice",
+    "bases": [
+      "miss"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Infinity",
+    "bases": [
+      "pole",
+      "spea"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Insight",
+    "bases": [
+      "pole",
+      "staf",
+      "spea"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Last Wish",
+    "bases": [
+      "swor",
+      "hamm",
+      "axe"
+    ],
+    "sock_req": 6
+  },
+  {
+    "name": "Lawbringer",
+    "bases": [
+      "swor",
+      "hamm",
+      "scep"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Myth",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Pattern",
+    "bases": [
+      "h2h", "h2h2"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Peace",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Phoenix",
+    "bases": [
+      "weapon",
+      "shie"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Plague",
+    "bases": [
+      "weapon"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Pride",
+    "bases": [
+      "pole",
+      "spea"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Principle",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Prudence",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 2
+  },
+  {
+    "name": "Rain",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Rift",
+    "bases": [
+      "pole",
+      "scep",
+      "spea"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Treachery",
+    "bases": [
+      "tors"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Grief",
+    "bases": [
+      "swor",
+      "axe"
+    ],
+    "sock_req": 5
+  },
+  {
+    "name": "Wind",
+    "bases": [
+      "mele"
+    ],
+    "sock_req": 3
+  },
+  {
+    "name": "Voice of Reason",
+    "bases": [
+      "swor",
+      "mace"
+    ],
+    "sock_req": 4
+  },
+  {
+    "name": "Wrath",
+    "bases": [
+      "miss"
+    ],
+    "sock_req": 4
+  }
+]
