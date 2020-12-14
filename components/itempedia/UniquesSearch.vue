@@ -115,7 +115,7 @@ export default {
     calcSocketMax() {
       let socketMax = this.formControl.sockets;
       if (this.formValues.socketMin !== undefined) {
-        socketMax = socketMax.slice(this.formValues.socketMin);
+        socketMax = socketMax.slice(this.formValues.socketMin - 1);
       }
       return socketMax;
     },
@@ -200,6 +200,16 @@ export default {
       const end = num * 50;
       const items = this.filteredItems.slice(start, end);
       return items;
+    },
+    getMinSockVal() {
+      return this.formValues.socketMin;
+    },
+  },
+  watch: {
+    getMinSockVal(val) {
+      if (val > this.formValues.socketMax) {
+        this.formValues.socketMax = val;
+      }
     },
   },
 };

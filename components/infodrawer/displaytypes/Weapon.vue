@@ -128,9 +128,6 @@ export default {
     },
   },
   props: {
-    item: {
-      type: Object,
-    },
     runewords: {
       type: Array,
     },
@@ -267,7 +264,7 @@ export default {
     },
   },
   watch: {
-    item(newItem, oldItem) {
+    isTier(newItem, oldItem) {
       if (newItem.name !== oldItem.name) {
         this.setEthereal = false;
         this.setTier = this.getItemAndUp.baseTier;
