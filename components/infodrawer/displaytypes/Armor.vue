@@ -121,6 +121,9 @@ export default {
     },
   },
   props: {
+    item: {
+      type: Object,
+    },
     runewords: {
       type: Array,
     },

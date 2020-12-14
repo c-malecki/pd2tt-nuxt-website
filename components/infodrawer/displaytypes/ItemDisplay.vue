@@ -1,6 +1,10 @@
 <template>
   <div class="ItemDisplay-container">
-    <component :is="getGroup" :runewords="filterRunewords"></component>
+    <component
+      :is="getGroup"
+      :item="data"
+      :runewords="filterRunewords"
+    ></component>
   </div>
 </template>
 
