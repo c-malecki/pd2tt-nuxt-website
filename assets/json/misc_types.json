@@ -1,0 +1,50 @@
+[
+  {
+    "type_name": "Rings",
+    "type_code": "ring",
+    "bases": [
+      {
+        "item_code": "rin",
+        "item_name": "Ring"
+      }
+    ]
+  },
+  {
+    "type_name": "Amulets",
+    "type_code": "amul",
+    "bases": [
+      {
+        "item_code": "amu",
+        "item_name": "Amulet"
+      }
+    ]
+  },
+  {
+    "type_name": "Jewels",
+    "type_code": "jewl",
+    "bases": [
+      {
+        "item_code": "jew",
+        "item_name": "Jewel"
+      }
+    ]
+  },
+  {
+    "type_name": "Charms",
+    "type_code": "char",
+    "bases": [
+      {
+        "item_code": "cm1",
+        "item_name": "Small Charm"
+      },
+      {
+        "item_code": "cm2",
+        "item_name": "Large Charm"
+      },
+      {
+        "item_code": "cm3",
+        "item_name": "Grand Charm"
+      }
+    ]
+  }
+]

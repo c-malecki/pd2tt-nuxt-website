@@ -62,6 +62,9 @@ import weaponTypes from "../../assets/json/weapon_types.json";
 import weaponBases from "../../assets/json/weapon_bases.json";
 import armorBases from "../../assets/json/armor_bases.json";
 import ItemTile from "./ItemTile";
+const sortTypesAlpha = [...weaponTypes, ...armorTypes].sort((a, b) =>
+  a.type_name.localeCompare(b.type_name)
+);
 export default {
   name: "BasesSearch",
   components: {
@@ -77,7 +80,7 @@ export default {
       socketMax: undefined,
     },
     formControl: {
-      types: [...weaponTypes, ...armorTypes],
+      types: sortTypesAlpha,
       sockets: [1, 2, 3, 4, 5, 6],
       tier: [
         { name: "Normal", code: "norm" },

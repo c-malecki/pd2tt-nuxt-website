@@ -80,9 +80,15 @@
 <script>
 import armorTypes from "../../assets/json/armor_types.json";
 import weaponTypes from "../../assets/json/weapon_types.json";
+import miscTypes from "../../assets/json/misc_types.json";
 import uniques from "../../assets/json/final_uniques.json";
 import allStats from "../../assets/json/all_item_stats.json";
 import ItemTile from "./ItemTile";
+const sortTypesAlpha = [
+  ...weaponTypes,
+  ...armorTypes,
+  ...miscTypes,
+].sort((a, b) => a.type_name.localeCompare(b.type_name));
 export default {
   name: "UniquesSearch",
   components: {
@@ -100,7 +106,7 @@ export default {
       selectedStats: [],
     },
     formControl: {
-      types: [...weaponTypes, ...armorTypes],
+      types: sortTypesAlpha,
       stats: [...allStats],
       sockets: [1, 2, 3, 4, 5, 6],
       tier: [
