@@ -273,7 +273,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -523,7 +523,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -746,7 +746,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -844,7 +844,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20-40% Increased Attack Speed",
         "min": 20,
@@ -986,7 +986,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+40% Increased Attack Speed",
         "min": 40,
@@ -1218,7 +1218,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+10% Faster Cast Rate",
         "min": 10,
@@ -1341,7 +1341,7 @@
     },
     "stats": [
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+30% Faster Cast Rate",
         "min": 30,
@@ -1629,7 +1629,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -2688,7 +2688,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -3023,7 +3023,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+40% Increased Attack Speed",
         "min": 40,
@@ -3244,7 +3244,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+15% Increased Attack Speed",
         "min": 15,
@@ -3511,7 +3511,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -3900,7 +3900,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -3909,7 +3909,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -4140,7 +4140,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+10% Increased Attack Speed",
         "min": 10,
@@ -4268,7 +4268,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -4611,7 +4611,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+-20% Increased Attack Speed",
         "min": -20,
@@ -4834,7 +4834,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -5067,7 +5067,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+50% Faster Cast Rate",
         "min": 50,
@@ -5317,7 +5317,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -5531,7 +5531,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+40% Increased Attack Speed",
         "min": 40,
@@ -5818,7 +5818,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -6174,7 +6174,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -6533,7 +6533,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -7149,7 +7149,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20-45% Faster Cast Rate",
         "min": 20,
@@ -7410,7 +7410,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -7597,7 +7597,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+50% Increased Attack Speed",
         "min": 50,
@@ -7847,7 +7847,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -8308,7 +8308,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -8424,7 +8424,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -8568,7 +8568,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -9105,7 +9105,7 @@
     "base_name": "Great Helm",
     "stats": [
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -9530,7 +9530,7 @@
     "base_name": "Leather Armor",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+20% Faster Run/Walk",
         "min": 20,
@@ -9539,7 +9539,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+40% Faster Hit Recovery",
         "min": 40,
@@ -9742,7 +9742,7 @@
     "base_name": "Studded Leather",
     "stats": [
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20-30% Increased Attack Speed",
         "min": 20,
@@ -9751,7 +9751,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -9970,7 +9970,7 @@
     "base_name": "Scale Mail",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+25% Faster Run/Walk",
         "min": 25,
@@ -10743,7 +10743,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+25% Faster Run/Walk",
         "min": 25,
@@ -10978,7 +10978,7 @@
     "base_name": "Buckler",
     "stats": [
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+40% Faster Block Rate",
         "min": 40,
@@ -11341,7 +11341,7 @@
     "base_name": "Bone Shield",
     "stats": [
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -11580,7 +11580,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+20% Faster Block Rate",
         "min": 20,
@@ -12047,7 +12047,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+10% Increased Attack Speed",
         "min": 10,
@@ -12056,7 +12056,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -12255,7 +12255,7 @@
         ]
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -12600,7 +12600,7 @@
     "base_name": "Heavy Boots",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+20% Faster Run/Walk",
         "min": 20,
@@ -12707,7 +12707,7 @@
     "base_name": "Chain Boots",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -12831,7 +12831,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+20% Faster Run/Walk",
         "min": 20,
@@ -12946,7 +12946,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+20% Faster Run/Walk",
         "min": 20,
@@ -13070,7 +13070,7 @@
     "base_name": "Sash",
     "stats": [
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+10% Faster Cast Rate",
         "min": 10,
@@ -13386,7 +13386,7 @@
     "base_name": "Heavy Belt",
     "stats": [
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -13483,7 +13483,7 @@
     "base_name": "Plated Belt",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20-30% Faster Hit Recovery",
         "min": 20,
@@ -13590,7 +13590,7 @@
     "base_name": "Amulet",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20-30% Faster Hit Recovery",
         "min": 20,
@@ -13768,7 +13768,7 @@
     "base_name": "Amulet",
     "stats": [
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+5-10% Faster Cast Rate",
         "min": 5,
@@ -14177,7 +14177,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -14293,7 +14293,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -14427,7 +14427,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30-40% Increased Attack Speed",
         "min": 30,
@@ -15251,7 +15251,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -15502,7 +15502,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+50% Faster Cast Rate",
         "min": 50,
@@ -15653,7 +15653,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+10% Faster Cast Rate",
         "min": 10,
@@ -15662,7 +15662,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -15931,7 +15931,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+30% Faster Cast Rate",
         "min": 30,
@@ -16073,7 +16073,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20-40% Increased Attack Speed",
         "min": 20,
@@ -16206,7 +16206,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -16691,7 +16691,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -17145,7 +17145,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -17297,7 +17297,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -17306,7 +17306,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -17714,7 +17714,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+-20% Increased Attack Speed",
         "min": -20,
@@ -17859,7 +17859,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -17989,7 +17989,7 @@
         ]
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -18221,7 +18221,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -18709,7 +18709,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+20% Faster Run/Walk",
         "min": 20,
@@ -18718,7 +18718,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+50% Increased Attack Speed",
         "min": 50,
@@ -18978,7 +18978,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -19405,7 +19405,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -19574,7 +19574,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+15% Increased Attack Speed",
         "min": 15,
@@ -19836,7 +19836,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -20117,7 +20117,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -20620,7 +20620,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -20772,7 +20772,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -21014,7 +21014,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -21148,7 +21148,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -21255,7 +21255,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -21533,7 +21533,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+30% Faster Cast Rate",
         "min": 30,
@@ -21682,7 +21682,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+50% Increased Attack Speed",
         "min": 50,
@@ -21691,7 +21691,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+50% Faster Hit Recovery",
         "min": 50,
@@ -21993,7 +21993,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+35% Faster Cast Rate",
         "min": 35,
@@ -22147,7 +22147,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+60% Faster Cast Rate",
         "min": 60,
@@ -22271,7 +22271,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing3",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -22378,7 +22378,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -22863,7 +22863,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20-40% Increased Attack Speed",
         "min": 20,
@@ -23125,7 +23125,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+50% Increased Attack Speed",
         "min": 50,
@@ -23386,7 +23386,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+10% Increased Attack Speed",
         "min": 10,
@@ -23493,7 +23493,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+80% Increased Attack Speed",
         "min": 80,
@@ -23683,6 +23683,7 @@
       {
         "code": "reanimate",
         "name": "item_reanimate",
+        "skill": "Demon Imp",
         "display": "5% Reanimate as: Demon Imp",
         "min": 5,
         "max": 5,
@@ -23743,7 +23744,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+15% Faster Run/Walk",
         "min": 15,
@@ -23831,7 +23832,7 @@
     "base_name": "Sallet",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -23937,7 +23938,7 @@
     "base_name": "Casque",
     "stats": [
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+10% Increased Attack Speed",
         "min": 10,
@@ -23946,7 +23947,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+10% Faster Hit Recovery",
         "min": 10,
@@ -24178,7 +24179,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -24187,7 +24188,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -24611,7 +24612,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -24708,7 +24709,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+30% Faster Cast Rate",
         "min": 30,
@@ -25118,7 +25119,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+15% Increased Attack Speed",
         "min": 15,
@@ -25127,7 +25128,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+15% Faster Hit Recovery",
         "min": 15,
@@ -25515,7 +25516,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+30% Faster Block Rate",
         "min": 30,
@@ -25754,7 +25755,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -25763,7 +25764,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -26023,6 +26024,7 @@
       {
         "code": "reanimate",
         "name": "item_reanimate",
+        "skill": "Returned",
         "display": "15% Reanimate as: Returned",
         "min": 15,
         "max": 15,
@@ -26091,7 +26093,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -26100,7 +26102,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -26206,7 +26208,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+30% Faster Block Rate",
         "min": 30,
@@ -26303,7 +26305,7 @@
     "base_name": "Round Shield",
     "stats": [
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+30% Faster Block Rate",
         "min": 30,
@@ -26428,7 +26430,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+20-30% Faster Run/Walk",
         "min": 20,
@@ -26437,7 +26439,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+10% Faster Block Rate",
         "min": 10,
@@ -26897,7 +26899,7 @@
         ]
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -26906,7 +26908,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+20% Faster Block Rate",
         "min": 20,
@@ -27003,7 +27005,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -27109,7 +27111,7 @@
     "base_name": "Barbed Shield",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -27118,7 +27120,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+50% Faster Block Rate",
         "min": 50,
@@ -27427,7 +27429,7 @@
     "base_name": "Heavy Bracers",
     "stats": [
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -27534,7 +27536,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -27776,7 +27778,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+25% Faster Run/Walk",
         "min": 25,
@@ -27909,7 +27911,7 @@
     "base_name": "Sharkskin Boots",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+40% Faster Run/Walk",
         "min": 40,
@@ -27918,7 +27920,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+20% Faster Block Rate",
         "min": 20,
@@ -28033,7 +28035,7 @@
     "base_name": "Mesh Boots",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -28130,7 +28132,7 @@
     "base_name": "Battle Boots",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+25% Faster Run/Walk",
         "min": 25,
@@ -28263,7 +28265,7 @@
     "base_name": "War Boots",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -28554,7 +28556,7 @@
     "base_name": "Mesh Belt",
     "stats": [
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+10% Faster Cast Rate",
         "min": 10,
@@ -29189,7 +29191,7 @@
     "base_name": "Wire Fleece",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -29313,7 +29315,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -29411,7 +29413,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+50% Faster Block Rate",
         "min": 50,
@@ -29526,7 +29528,7 @@
     "base_name": "Monarch",
     "stats": [
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+35% Faster Block Rate",
         "min": 35,
@@ -29812,7 +29814,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -29964,7 +29966,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+50% Increased Attack Speed",
         "min": 50,
@@ -30142,7 +30144,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20-40% Increased Attack Speed",
         "min": 20,
@@ -30311,7 +30313,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -30479,7 +30481,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -30926,7 +30928,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast3",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+50% Faster Cast Rate",
         "min": 50,
@@ -31088,7 +31090,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -31339,7 +31341,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -31500,7 +31502,7 @@
     "base_name": "Amulet",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -31509,7 +31511,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -31707,7 +31709,7 @@
         ]
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+10% Increased Attack Speed",
         "min": 10,
@@ -31716,7 +31718,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+10% Faster Cast Rate",
         "min": 10,
@@ -32197,7 +32199,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -32418,7 +32420,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -32550,7 +32552,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+30% Faster Block Rate",
         "min": 30,
@@ -32722,7 +32724,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -32856,7 +32858,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -33008,7 +33010,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -33143,7 +33145,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+30% Faster Cast Rate",
         "min": 30,
@@ -33294,7 +33296,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+30% Faster Block Rate",
         "min": 30,
@@ -33462,7 +33464,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -33587,7 +33589,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -33741,7 +33743,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -34225,7 +34227,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -34430,7 +34432,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+40% Increased Attack Speed",
         "min": 40,
@@ -34661,7 +34663,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+30% Faster Block Rate",
         "min": 30,
@@ -34794,7 +34796,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+60% Increased Attack Speed",
         "min": 60,
@@ -34849,6 +34851,7 @@
       {
         "code": "reanimate",
         "name": "item_reanimate",
+        "skill": "Returned",
         "display": "10% Reanimate as: Returned",
         "min": 10,
         "max": 10,
@@ -35186,7 +35189,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -35570,7 +35573,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+50% Increased Attack Speed",
         "min": 50,
@@ -35579,7 +35582,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+30% Faster Cast Rate",
         "min": 30,
@@ -35836,7 +35839,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -35942,7 +35945,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -35951,7 +35954,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -36147,7 +36150,7 @@
     "base_name": "Sacred Armor",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+45% Faster Run/Walk",
         "min": 45,
@@ -36288,7 +36291,7 @@
     "base_name": "Vambraces",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -36510,7 +36513,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+40% Increased Attack Speed",
         "min": 40,
@@ -36627,7 +36630,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -37149,7 +37152,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -37247,7 +37250,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+50% Faster Cast Rate",
         "min": 50,
@@ -37394,7 +37397,7 @@
         ]
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+50% Increased Attack Speed",
         "min": 50,
@@ -37519,7 +37522,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+25% Increased Attack Speed",
         "min": 25,
@@ -37653,7 +37656,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+10% Increased Attack Speed",
         "min": 10,
@@ -37902,7 +37905,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -38027,7 +38030,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -38170,7 +38173,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+30% Faster Block Rate",
         "min": 30,
@@ -38276,7 +38279,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+30% Faster Cast Rate",
         "min": 30,
@@ -38285,7 +38288,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -38323,6 +38326,7 @@
       {
         "code": "reanimate",
         "name": "item_reanimate",
+        "skill": "Hellspawn",
         "display": "6% Reanimate as: Hellspawn",
         "min": 6,
         "max": 12,
@@ -38918,7 +38922,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -39034,7 +39038,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+25% Faster Cast Rate",
         "min": 25,
@@ -39150,7 +39154,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+60% Increased Attack Speed",
         "min": 60,
@@ -39269,7 +39273,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+15% Increased Attack Speed",
         "min": 15,
@@ -39390,7 +39394,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -39525,7 +39529,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+20% Faster Run/Walk",
         "min": 20,
@@ -39648,7 +39652,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+25% Increased Attack Speed",
         "min": 25,
@@ -39861,7 +39865,7 @@
     "base_name": "Corona",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -40003,7 +40007,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -40128,7 +40132,7 @@
     "base_name": "Zakarum Shield",
     "stats": [
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+35% Faster Cast Rate",
         "min": 35,
@@ -40272,7 +40276,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20-40% Faster Hit Recovery",
         "min": 20,
@@ -40393,7 +40397,7 @@
         ]
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+25-40% Faster Cast Rate",
         "min": 25,
@@ -40623,7 +40627,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+25% Faster Cast Rate",
         "min": 25,
@@ -40905,7 +40909,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20-30% Faster Cast Rate",
         "min": 20,
@@ -41150,7 +41154,7 @@
         "sub_stats": []
       },
       {
-        "code": "block2",
+        "code": "block1",
         "name": "item_fasterblockrate",
         "display": "+25% Faster Block Rate",
         "min": 25,
@@ -41255,7 +41259,7 @@
     "base_name": "Tiara",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -41378,7 +41382,7 @@
     "base_name": "Dusk Shroud",
     "stats": [
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+20% Faster Cast Rate",
         "min": 20,
@@ -41594,7 +41598,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -41717,7 +41721,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -41834,7 +41838,7 @@
     "base_name": "Blade Barrier",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+30% Faster Hit Recovery",
         "min": 30,
@@ -41931,7 +41935,7 @@
     "base_name": "Vampirebone Gloves",
     "stats": [
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -42055,7 +42059,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+25% Increased Attack Speed",
         "min": 25,
@@ -42182,7 +42186,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -42297,7 +42301,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+40% Faster Cast Rate",
         "min": 40,
@@ -42445,7 +42449,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+15% Increased Attack Speed",
         "min": 15,
@@ -42543,7 +42547,7 @@
     "base_name": "Scarabshell Boots",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+30% Faster Run/Walk",
         "min": 30,
@@ -42552,7 +42556,7 @@
         "sub_stats": []
       },
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+20% Faster Hit Recovery",
         "min": 20,
@@ -42676,7 +42680,7 @@
     "base_name": "Boneweave Boots",
     "stats": [
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+20% Faster Run/Walk",
         "min": 20,
@@ -42828,7 +42832,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -42933,7 +42937,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+10-20% Faster Cast Rate",
         "min": 10,
@@ -43022,7 +43026,7 @@
     "base_name": "Vampirefang Belt",
     "stats": [
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+20% Increased Attack Speed",
         "min": 20,
@@ -43218,7 +43222,7 @@
     "base_name": "Mithril Coil",
     "stats": [
       {
-        "code": "balance2",
+        "code": "balance1",
         "name": "item_fastergethitrate",
         "display": "+10% Faster Hit Recovery",
         "min": 10,
@@ -43317,7 +43321,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+5-10% Faster Run/Walk",
         "min": 5,
@@ -43548,7 +43552,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+40% Increased Attack Speed",
         "min": 40,
@@ -43804,7 +43808,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -43920,7 +43924,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+40% Increased Attack Speed",
         "min": 40,
@@ -44046,7 +44050,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+25% Increased Attack Speed",
         "min": 25,
@@ -44207,7 +44211,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+40% Increased Attack Speed",
         "min": 40,
@@ -44216,7 +44220,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+40% Faster Cast Rate",
         "min": 40,
@@ -44443,7 +44447,7 @@
         "sub_stats": []
       },
       {
-        "code": "swing2",
+        "code": "swing1",
         "name": "item_fasterattackrate",
         "display": "+30% Increased Attack Speed",
         "min": 30,
@@ -44542,7 +44546,7 @@
         "sub_stats": []
       },
       {
-        "code": "cast2",
+        "code": "cast1",
         "name": "item_fastercastrate",
         "display": "+85% Faster Cast Rate",
         "min": 85,
@@ -44810,7 +44814,7 @@
         "sub_stats": []
       },
       {
-        "code": "move2",
+        "code": "move1",
         "name": "item_fastermovevelocity",
         "display": "+25% Faster Run/Walk",
         "min": 25,
