@@ -52,7 +52,7 @@
       </v-btn>
     </div>
     <div class="NameImage">
-      <h5 :class="itemTextClass">{{ item.name }}</h5>
+      <h5 :class="itemTextClass">{{ isTier.name }}</h5>
       <span v-if="isTier.props.rarity !== `nmag`" class="ItemTier">{{
         isTier.base_name
       }}</span>
