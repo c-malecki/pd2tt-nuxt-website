@@ -24,7 +24,8 @@ export default {
   },
   methods: {
     openInfoDrawer(item) {
-      this.$store.commit("openDrawer", { type: "item", data: item });
+      this.$store.commit("openDrawer", "item");
+      this.$store.commit("items/currentItem", item);
     },
   },
 };

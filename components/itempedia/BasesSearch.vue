@@ -17,7 +17,7 @@
             <v-col xs="12" sm="12" md="6" lg="3" xl="3">
               <v-autocomplete
                 v-model="formValues.tier"
-                :items="formControl.tier"
+                :items="getTiers"
                 label="Tier"
                 item-text="name"
                 item-value="code"
@@ -57,14 +57,9 @@
 </template>
 
 <script>
-import armorTypes from "../../assets/json/armor_types.json";
-import weaponTypes from "../../assets/json/weapon_types.json";
-import weaponBases from "../../assets/json/weapon_bases.json";
-import armorBases from "../../assets/json/armor_bases.json";
 import ItemTile from "./ItemTile";
-const sortTypesAlpha = [...weaponTypes, ...armorTypes].sort((a, b) =>
-  a.type_name.localeCompare(b.type_name)
-);
+import { mapGetters } from "vuex";
+
 export default {
   name: "BasesSearch",
   components: {
@@ -72,7 +67,6 @@ export default {
   },
   data: () => ({
     page: 1,
-    allItems: [...weaponBases, ...armorBases],
     formValues: {
       type: undefined,
       tier: undefined,
@@ -80,24 +74,11 @@ export default {
       socketMax: undefined,
     },
     formControl: {
-      types: sortTypesAlpha,
       sockets: [1, 2, 3, 4, 5, 6],
-      tier: [
-        { name: "Normal", code: "norm" },
-        { name: "Exceptional", code: "exc" },
-        { name: "Elite", code: "elt" },
-      ],
     },
   }),
   computed: {
-    getTypes() {
-      return this.formControl.types.map((obj) => {
-        return {
-          name: obj.type_name,
-          code: obj.type_code,
-        };
-      });
-    },
+    ...mapGetters("items", ["getBases", "getTypes", "getTiers"]),
     calcSocketMax() {
       let socketMax = this.formControl.sockets;
       if (this.formValues.socketMin !== undefined) {
@@ -106,7 +87,7 @@ export default {
       return socketMax;
     },
     filteredItems() {
-      let items = this.allItems;
+      let items = this.getBases;
       const { type, tier, socketMin, socketMax } = this.formValues;
       if (type !== undefined) {
         items = items.filter((obj) => obj.type === type);

@@ -1,19 +1,17 @@
 export const state = () => ({
-  infoDrawer: {
+  drawer: {
     isOpen: false,
-    current: null,
+    type: null,
   },
 });
 
 export const mutations = {
   openDrawer(state, payload) {
-    state.infoDrawer.isOpen = true;
-    state.infoDrawer.current = {
-      type: payload.type,
-      data: payload.data,
-    };
+    // "item", ...
+    state.drawer.type = payload;
+    state.drawer.isOpen = true;
   },
   closeDrawer(state, payload) {
-    state.infoDrawer.isOpen = payload;
+    state.drawer.isOpen = payload;
   },
 };

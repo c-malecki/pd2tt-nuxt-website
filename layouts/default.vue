@@ -60,7 +60,7 @@ export default {
   computed: {
     drawerState: {
       get() {
-        return this.$store.state.infoDrawer.isOpen;
+        return this.$store.state.drawer.isOpen;
       },
       set(val) {
         return this.$store.commit("closeDrawer", val);
@@ -71,9 +71,6 @@ export default {
       const viewWidth = this.$vuetify.breakpoint.width;
       if (viewWidth < 1264) {
         width = "500";
-      }
-      if (viewWidth < 960) {
-        width = "400";
       }
       if (viewWidth < 600) {
         width = "100%";

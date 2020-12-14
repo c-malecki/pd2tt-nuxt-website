@@ -1,14 +1,14 @@
 <template>
   <div class="InfoDrawerContent-container">
     <component
-      :is="getComponentType"
-      v-if="this.$store.state.infoDrawer.current"
-      :data="getDataForComponent"
+      :is="getComponentData.component"
+      :data="getComponentData.data"
     ></component>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 import ItemDisplay from "./displaytypes/ItemDisplay";
 export default {
   name: "InfoDrawerContent",
@@ -16,16 +16,19 @@ export default {
     ItemDisplay,
   },
   computed: {
-    getComponentType() {
+    ...mapGetters("items", ["getCurrentItem"]),
+    getComponentData() {
       let component;
-      const type = this.$store.state.infoDrawer.current.type;
+      let data;
+      const type = this.$store.state.drawer.type;
       if (type === "item") {
         component = ItemDisplay;
+        data = this.getCurrentItem;
       }
-      return component;
-    },
-    getDataForComponent() {
-      return this.$store.state.infoDrawer.current.data;
+      return {
+        component: component,
+        data: data,
+      };
     },
   },
 };

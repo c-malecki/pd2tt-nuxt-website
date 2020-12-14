@@ -1,8 +1,49 @@
 <template>
   <div class="ArmorItem-container">
-    <div class="ToggleEth">
+    <div class="ToggleItemOptions">
+      <div class="ButtonRow">
+        <v-btn
+          v-if="getItemAndUp.normal && getItemAndUp.rarity !== `nmag`"
+          @click="setTier = `norm`"
+        >
+          <span>Normal</span>
+          <v-icon>
+            {{
+              setTier === "norm"
+                ? "mdi-checkbox-marked"
+                : "mdi-checkbox-blank-outline"
+            }}
+          </v-icon>
+        </v-btn>
+        <v-btn
+          v-if="getItemAndUp.exceptional && getItemAndUp.rarity !== `nmag`"
+          @click="setTier = `exc`"
+        >
+          <span>Exceptional</span>
+          <v-icon>
+            {{
+              setTier === "exc"
+                ? "mdi-checkbox-marked"
+                : "mdi-checkbox-blank-outline"
+            }}
+          </v-icon>
+        </v-btn>
+        <v-btn
+          v-if="getItemAndUp.elite && getItemAndUp.rarity !== `nmag`"
+          @click="setTier = `elt`"
+        >
+          <span>Elite</span>
+          <v-icon>
+            {{
+              setTier === "elt"
+                ? "mdi-checkbox-marked"
+                : "mdi-checkbox-blank-outline"
+            }}
+          </v-icon>
+        </v-btn>
+      </div>
       <v-btn @click="isEthereal = !setEthereal">
-        <span>Eth</span>
+        <span>Ethereal</span>
         <v-icon>
           {{
             isEthereal ? "mdi-checkbox-marked" : "mdi-checkbox-blank-outline"
@@ -10,37 +51,37 @@
         </v-icon>
       </v-btn>
     </div>
-    <div class="NameImage" @click="overlay = true">
+    <div class="NameImage">
       <h5 :class="itemTextClass">{{ item.name }}</h5>
-      <span v-if="item.props.rarity !== `nmag`" class="ItemTier">{{
-        item.base_name
+      <span v-if="isTier.props.rarity !== `nmag`" class="ItemTier">{{
+        isTier.base_name
       }}</span>
       <div class="ImageContainer">
-        <img :src="item.image" :alt="item.name" />
+        <img :src="isTier.image" :alt="isTier.name" />
       </div>
     </div>
     <v-col>
       <ul>
-        <li v-if="item.props.tier" class="ItemTier">
-          {{ item.props.tier | itemTier }}
+        <li v-if="isTier.props.tier" class="ItemTier">
+          {{ isTier.props.tier | itemTier }}
         </li>
         <li>Defense: {{ calcDefense }}</li>
-        <li v-if="item.props.level_req > 0">
-          Level Req: {{ item.props.level_req }}
+        <li v-if="isTier.props.level_req > 0">
+          Level Req: {{ isTier.props.level_req }}
         </li>
-        <li v-if="item.props.str_req > 0">
-          Strength Req: {{ item.props.str_req }}
+        <li v-if="isTier.props.str_req > 0">
+          Strength Req: {{ isTier.props.str_req }}
         </li>
-        <li>Durability: {{ item.props.durability }}</li>
+        <li>Durability: {{ isTier.props.durability }}</li>
         <li class="ItemTier">
-          Max Sockets: {{ item.props.sockets ? item.props.sockets : 0 }}
+          Max Sockets: {{ isTier.props.sockets ? isTier.props.sockets : 0 }}
         </li>
-        <li v-if="item.defense.block">Block: {{ item.defense.block }}</li>
-        <li v-if="item.damage && item.damage.smite">
-          Smite: {{ item.damage.smite.min }}-{{ item.damage.smite.max }}
+        <li v-if="isTier.defense.block">Block: {{ isTier.defense.block }}</li>
+        <li v-if="isTier.damage && isTier.damage.smite">
+          Smite: {{ isTier.damage.smite.min }}-{{ isTier.damage.smite.max }}
         </li>
-        <ul v-if="item.stats.length > 0" class="ItemStats">
-          <li v-for="(stat, idx) in item.stats" :key="`${stat.code}-${idx}`">
+        <ul v-if="isTier.stats.length > 0" class="ItemStats">
+          <li v-for="(stat, idx) in isTier.stats" :key="`${stat.code}-${idx}`">
             {{ stat.display }}
           </li>
         </ul>
@@ -65,6 +106,7 @@
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "ArmorDisplay",
   filters: {
@@ -79,19 +121,18 @@ export default {
     },
   },
   props: {
-    item: {
-      type: Object,
-    },
     runewords: {
       type: Array,
     },
   },
   data: () => ({
     setEthereal: false,
+    setTier: null,
   }),
   computed: {
+    ...mapGetters("items", ["getItemAndUp"]),
     getRunewords() {
-      let itemType = this.item.type;
+      let itemType = this.isTier.type;
       if (itemType === "phlm" || itemType === "pelt" || itemType === "circ") {
         itemType = "helm";
       }
@@ -101,24 +142,24 @@ export default {
       return this.runewords.filter(
         (obj) =>
           obj.bases.includes(itemType) &&
-          this.item.props.sockets >= obj.sock_req
+          this.isTier.props.sockets >= obj.sock_req
       );
     },
     showRunewords() {
-      return this.item.props.rarity === "nmag";
+      return this.isTier.props.rarity === "nmag";
     },
     itemTextClass() {
       let text = "nmag";
-      if (this.item.props.rarity === "uni") {
+      if (this.isTier.props.rarity === "uni") {
         text = "rw-uni";
       }
       return text;
     },
     calcDefense() {
-      const { defense } = this.item;
+      let defense = this.isTier.defense;
       const isEth = this.isEthereal;
-      const ed = this.item.stats.filter((obj) => obj.code === "ac%");
-      const ac = this.item.stats.filter((obj) => obj.code === "ac");
+      const ed = this.isTier.stats.filter((obj) => obj.code === "ac%");
+      const ac = this.isTier.stats.filter((obj) => obj.code === "ac");
       const edVal =
         ed.length > 0 ? { min: ed[0].min, max: ed[0].max } : { min: 0, max: 0 };
       const acVal =
@@ -139,7 +180,7 @@ export default {
     isEthereal: {
       get() {
         if (
-          this.item.stats.filter((obj) => obj.code === "ethereal").length > 0
+          this.isTier.stats.filter((obj) => obj.code === "ethereal").length > 0
         ) {
           return true;
         }
@@ -149,13 +190,31 @@ export default {
         return (this.setEthereal = bool);
       },
     },
+    isTier: {
+      get() {
+        if (this.setTier === "exc") {
+          return this.getItemAndUp.exceptional;
+        }
+        if (this.setTier === "elt") {
+          return this.getItemAndUp.elite;
+        }
+        return this.getItemAndUp.baseItem;
+      },
+      set(tier) {
+        return (this.setTier = tier);
+      },
+    },
   },
   watch: {
     item(newItem, oldItem) {
       if (newItem.name !== oldItem.name) {
         this.setEthereal = false;
+        this.setTier = this.getItemAndUp.baseTier;
       }
     },
+  },
+  beforeMount() {
+    this.setTier = this.getItemAndUp.baseTier;
   },
 };
 </script>
@@ -168,12 +227,20 @@ export default {
   align-items: center;
   background-color: $dark-bg;
 
-  .ToggleEth {
-    position: absolute;
-    top: 0;
-    left: 0;
-    span {
-      margin-right: 0.5rem;
+  .ToggleItemOptions {
+    display: flex;
+    flex-direction: column;
+
+    .ButtonRow {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    button {
+      margin: 0.2rem 0;
+      span {
+        margin-right: 0.5rem;
+      }
     }
   }
 

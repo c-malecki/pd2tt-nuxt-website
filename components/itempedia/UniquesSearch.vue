@@ -21,7 +21,7 @@
           <v-col xs="12" sm="12" md="6" lg="3" xl="3">
             <v-autocomplete
               v-model="formValues.tier"
-              :items="formControl.tier"
+              :items="getTiers"
               label="Tier"
               item-text="name"
               item-value="code"
@@ -29,6 +29,10 @@
             />
           </v-col>
         </v-row>
+        <p>
+          (Note - Sockets are not based on corruptions currently. They use the
+          same max sockets as the corresponding base item.)
+        </p>
         <v-row dense>
           <v-col xs="12" sm="6" md="4" lg="2" xl="2">
             <v-autocomplete
@@ -51,7 +55,7 @@
           <v-col xs="12" sm="12" md="12" lg="6" xl="6">
             <v-autocomplete
               v-model="formValues.selectedStats"
-              :items="formControl.stats"
+              :items="getItemStats"
               item-text="display"
               item-value="display"
               label="Properties"
@@ -78,17 +82,9 @@
 </template>
 
 <script>
-import armorTypes from "../../assets/json/armor_types.json";
-import weaponTypes from "../../assets/json/weapon_types.json";
-import miscTypes from "../../assets/json/misc_types.json";
-import uniques from "../../assets/json/final_uniques.json";
-import allStats from "../../assets/json/all_item_stats.json";
 import ItemTile from "./ItemTile";
-const sortTypesAlpha = [
-  ...weaponTypes,
-  ...armorTypes,
-  ...miscTypes,
-].sort((a, b) => a.type_name.localeCompare(b.type_name));
+import { mapGetters } from "vuex";
+
 export default {
   name: "UniquesSearch",
   components: {
@@ -96,7 +92,6 @@ export default {
   },
   data: () => ({
     page: 1,
-    allItems: [...uniques],
     formValues: {
       name: "",
       type: undefined,
@@ -106,25 +101,17 @@ export default {
       selectedStats: [],
     },
     formControl: {
-      types: sortTypesAlpha,
-      stats: [...allStats],
       sockets: [1, 2, 3, 4, 5, 6],
-      tier: [
-        { name: "Normal", code: "norm" },
-        { name: "Exceptional", code: "exc" },
-        { name: "Elite", code: "elt" },
-      ],
     },
   }),
   computed: {
-    getTypes() {
-      return this.formControl.types.map((obj) => {
-        return {
-          name: obj.type_name,
-          code: obj.type_code,
-        };
-      });
-    },
+    ...mapGetters("items", [
+      "getBases",
+      "getTypes",
+      "getItemStats",
+      "getUniques",
+      "getTiers",
+    ]),
     calcSocketMax() {
       let socketMax = this.formControl.sockets;
       if (this.formValues.socketMin !== undefined) {
@@ -133,7 +120,7 @@ export default {
       return socketMax;
     },
     filteredItems() {
-      let items = this.allItems;
+      let items = this.getUniques;
       const {
         name,
         type,
@@ -184,24 +171,6 @@ export default {
           skill: obj.skill,
         };
       });
-    },
-    test() {
-      let items = this.allItems;
-      if (this.formValues.selectedStats.length > 0) {
-        items = items.filter((obj) => {
-          for (let i = 0; i < this.getSelectedStats.length; i++) {
-            for (let j = 0; j < obj.stats.length; j++) {
-              if (
-                this.getSelectedStats[i].code === obj.stats[j].code &&
-                this.getSelectedStats[i].skill === obj.stats[j].skill
-              ) {
-                return obj;
-              }
-            }
-          }
-        });
-      }
-      return items;
     },
     getCurrentPage: {
       get() {
