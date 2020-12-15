@@ -8912,6 +8912,18 @@
   {
     "code": "reanimate",
     "name": "item_reanimate",
+    "skill": "Wraith",
+    "display": "{X}% Reanimate as: Wraith",
+    "stats": [
+      {
+        "stat": "item_reanimate",
+        "descstr": "{X}% Reanimate as: Wraith"
+      }
+    ]
+  },
+  {
+    "code": "reanimate",
+    "name": "item_reanimate",
     "skill": "Returned",
     "display": "{X}% Reanimate as: Returned",
     "stats": [

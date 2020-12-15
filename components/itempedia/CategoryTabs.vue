@@ -16,6 +16,7 @@ export default {
     tabs: [
       { id: 0, text: "Bases / Non-Magic" },
       { id: 1, text: "Unique Items" },
+      { id: 2, text: "Runewords" },
     ],
   }),
   methods: {

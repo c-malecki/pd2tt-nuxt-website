@@ -18,27 +18,26 @@
               clearable
             />
           </v-col>
+        </v-row>
+        <v-row dense>
           <v-col xs="12" sm="12" md="6" lg="3" xl="3">
             <v-autocomplete
-              v-model="formValues.tier"
-              :items="getTiers"
-              label="Tier"
+              v-model="formValues.runes"
+              :items="getRunes"
+              label="Runes (Currently partial match)"
               item-text="name"
               item-value="code"
               clearable
+              multiple
             />
           </v-col>
         </v-row>
-        <p>
-          (Note - Sockets are not based on corruptions currently. They use the
-          same max sockets as the corresponding base item.)
-        </p>
         <v-row dense>
           <v-col xs="12" sm="6" md="4" lg="2" xl="2">
             <v-autocomplete
               v-model="formValues.socketMin"
               :items="formControl.sockets"
-              label="Sockets Min"
+              label="Socket Req Min"
               clearable
             />
           </v-col>
@@ -46,7 +45,7 @@
             <v-autocomplete
               v-model="formValues.socketMax"
               :items="calcSocketMax"
-              label="Sockets Max"
+              label="Socket Req Max"
               clearable
             />
           </v-col>
@@ -86,7 +85,7 @@ import ItemTile from "./ItemTile";
 import { mapGetters } from "vuex";
 
 export default {
-  name: "UniquesSearch",
+  name: "RunewordsSearch",
   components: {
     ItemTile,
   },
@@ -95,7 +94,7 @@ export default {
     formValues: {
       name: "",
       type: undefined,
-      tier: undefined,
+      runes: [],
       socketMin: undefined,
       socketMax: undefined,
       selectedStats: [],
@@ -108,9 +107,9 @@ export default {
     ...mapGetters("items", [
       "getBases",
       "getTypes",
+      "getRunes",
       "getItemStats",
-      "getUniques",
-      "getTiers",
+      "getRunewords",
     ]),
     calcSocketMax() {
       let socketMax = this.formControl.sockets;
@@ -120,11 +119,11 @@ export default {
       return socketMax;
     },
     filteredItems() {
-      let items = this.getUniques;
+      let items = this.getRunewords;
       const {
         name,
         type,
-        tier,
+        runes,
         socketMin,
         socketMax,
         selectedStats,
@@ -132,20 +131,51 @@ export default {
       items = items.filter((obj) =>
         obj.name.toLowerCase().includes(name.toLowerCase())
       );
-      if (type !== undefined) {
-        items = items.filter((obj) => obj.type === type);
+      if (runes.length > 0) {
+        items = items.filter((obj) => {
+          for (let i = 0; i < runes.length; i++) {
+            for (let j = 0; j < obj.props.rune_recipe.length; j++) {
+              if (runes[i] === obj.props.rune_recipe[j]) {
+                return obj;
+              }
+            }
+          }
+        });
       }
-      if (tier !== undefined) {
-        items = items.filter((obj) => obj.props.tier === tier);
+
+      if (type !== undefined) {
+        let fixType = "";
+        if (type === "1hswor" || type === "2hswor") {
+          fixType = "swor";
+        }
+        if (type === "1haxe" || type === "2haxe") {
+          fixType = "axe";
+        }
+        if (type === "h2h2") {
+          fixType = "h2h";
+        }
+        if (type === "bow" || type === "xbox" || type === "abow") {
+          fixType = "miss";
+        }
+        if (type === "aspe") {
+          fixType = "spea";
+        }
+        if (type === "phlm" || type === "pelt" || type === "circ") {
+          fixType = "helm";
+        }
+        if (type === "head" || type === "ashd") {
+          fixType = "shie";
+        }
+        items = items.filter((obj) => obj.bases.includes(fixType));
       }
       if (socketMin !== undefined) {
         items = items.filter(
-          (obj) => obj.props.sockets && obj.props.sockets >= socketMin
+          (obj) => obj.props.sock_req && obj.props.sock_req >= socketMin
         );
       }
       if (socketMax !== undefined) {
         items = items.filter(
-          (obj) => obj.props.sockets && obj.props.sockets <= socketMax
+          (obj) => obj.props.sock_req && obj.props.sock_req <= socketMax
         );
       }
       if (selectedStats.length > 0) {

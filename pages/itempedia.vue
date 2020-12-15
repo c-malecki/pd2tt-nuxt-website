@@ -9,6 +9,7 @@
 <script>
 import BasesSearch from "../components/itempedia/BasesSearch";
 import UniquesSearch from "../components/itempedia/UniquesSearch";
+import RunewordsSearch from "../components/itempedia/RunewordSearch";
 import CategoryTabs from "../components/itempedia/CategoryTabs";
 export default {
   name: "Itempedia",
@@ -16,6 +17,7 @@ export default {
     CategoryTabs,
     BasesSearch,
     UniquesSearch,
+    RunewordsSearch,
   },
   data: () => ({
     selected: 0,
@@ -25,6 +27,9 @@ export default {
       let component = BasesSearch;
       if (this.selected === 1) {
         component = UniquesSearch;
+      }
+      if (this.selected === 2) {
+        component = RunewordsSearch;
       }
       return component;
     },

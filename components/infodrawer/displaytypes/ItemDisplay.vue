@@ -5,10 +5,11 @@
 </template>
 
 <script>
-import allRunewords from "../../../assets/json/all_runewords.json";
 import Weapon from "./Weapon";
 import Armor from "./Armor";
+import Runeword from "./Runeword";
 import MiscItem from "./MiscItem";
+import { mapGetters } from "vuex";
 export default {
   name: "ItemDisplay",
   props: {
@@ -17,6 +18,7 @@ export default {
     },
   },
   computed: {
+    ...mapGetters("items", ["getRunewords"]),
     getGroup() {
       let component;
       if (this.data.group === "weapon") {
@@ -25,11 +27,13 @@ export default {
         component = Armor;
       } else if (this.data.group === "misc") {
         component = MiscItem;
+      } else if (this.data.group === "runeword") {
+        component = Runeword;
       }
       return component;
     },
     filterRunewords() {
-      const runewords = [...allRunewords];
+      const runewords = this.getRunewords;
       const weaponTypes = [
         "club",
         "hamm",
@@ -38,7 +42,7 @@ export default {
         "scep",
         "swor",
         "axe",
-        "staff",
+        "staf",
         "miss",
         "wand",
         "weapon",

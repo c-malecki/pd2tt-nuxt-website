@@ -95,7 +95,7 @@
           <v-expansion-panel-content
             v-for="rw in getRunewords"
             :key="rw.name"
-            class="Runeword"
+            class="rw-uni"
           >
             {{ rw.name }}
           </v-expansion-panel-content>
@@ -142,7 +142,7 @@ export default {
       return this.runewords.filter(
         (obj) =>
           obj.bases.includes(itemType) &&
-          this.isTier.props.sockets >= obj.sock_req
+          this.isTier.props.sockets >= obj.props.sock_req
       );
     },
     showRunewords() {

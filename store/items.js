@@ -4,6 +4,8 @@ import miscTypes from "../assets/json/misc_types.json";
 import armorBases from "../assets/json/armor_bases.json";
 import weaponBases from "../assets/json/weapon_bases.json";
 import uniqueItems from "../assets/json/final_uniques.json";
+import runewords from "../assets/json/all_runewords.json";
+import runes from "../assets/json/runes.json";
 import itemStats from "../assets/json/all_item_stats.json";
 import mapStats from "../assets/json/map_stats.json";
 
@@ -25,6 +27,8 @@ export const state = () => ({
     weapons: weaponBases,
   },
   uniques: uniqueItems,
+  runewords: runewords,
+  runes: runes,
   tiers: [
     { name: "Normal", code: "norm" },
     { name: "Exceptional", code: "exc" },
@@ -115,6 +119,12 @@ export const getters = {
   },
   getUniques: (state) => {
     return state.uniques;
+  },
+  getRunewords: (state) => {
+    return state.runewords;
+  },
+  getRunes: (state) => {
+    return state.runes;
   },
   getItemStats: (state) => {
     return state.stats.itemStats;

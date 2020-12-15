@@ -158,7 +158,7 @@ export default {
       return this.runewords.filter(
         (obj) =>
           obj.bases.includes(itemType) &&
-          this.isTier.props.sockets >= obj.sock_req
+          this.isTier.props.sockets >= obj.props.sock_req
       );
     },
     showRunewords() {
