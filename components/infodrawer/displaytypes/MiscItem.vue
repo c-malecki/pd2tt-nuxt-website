@@ -1,45 +1,31 @@
 <template>
-  <div v-click-outside="handleOutside" class="MiscItem-container">
-    <div class="NameImage" @click="overlay = true">
-      <h5 :class="itemTextClass">{{ item.name }}</h5>
-      <span v-if="item.props.rarity !== `nmag`" class="ItemTier">{{
-        item.base_name
+  <div class="MiscItem-container">
+    <div class="NameImage">
+      <h5 :class="itemTextClass">{{ getCurrentItem.name }}</h5>
+      <span v-if="getCurrentItem.props.rarity !== `nmag`" class="ItemTier">{{
+        getCurrentItem.base_name
       }}</span>
       <div class="ImageContainer">
-        <img :src="item.image" :alt="item.name" />
+        <img :src="getCurrentItem.image" :alt="getCurrentItem.name" />
       </div>
     </div>
     <v-col>
       <ul>
-        <li v-if="item.props.level_req > 0">
-          Level Req: {{ item.props.level_req }}
+        <li v-if="getCurrentItem.props.level_req > 0">
+          Level Req: {{ getCurrentItem.props.level_req }}
         </li>
-        <ul v-if="item.stats.length > 0" class="ItemStats">
-          <li v-for="stat in item.stats" :key="stat.code">
+        <ul v-if="getCurrentItem.stats.length > 0" class="ItemStats">
+          <li v-for="stat in getCurrentItem.stats" :key="stat.code">
             {{ stat.display }}
           </li>
         </ul>
       </ul>
-      <v-expansion-panels
-        v-if="showRunewords"
-        :style="{ maxHeight: `300px`, overflowY: `scroll`, marginTop: `1rem` }"
-      >
-        <v-expansion-panel>
-          <v-expansion-panel-header> Runewords </v-expansion-panel-header>
-          <v-expansion-panel-content
-            v-for="rw in getRunewords"
-            :key="rw.name"
-            class="Runeword"
-          >
-            {{ rw.name }}
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
     </v-col>
   </div>
 </template>
 
 <script>
+import { mapGetters } from "vuex";
 export default {
   name: "MiscItemDisplay",
   filters: {
@@ -53,46 +39,14 @@ export default {
       return string;
     },
   },
-  props: {
-    item: {
-      type: Object,
-    },
-    runewords: {
-      type: Array,
-    },
-  },
-  data: () => ({
-    overlay: false,
-  }),
   computed: {
-    getRunewords() {
-      let itemType = this.item.type;
-      if (itemType === "phlm" || itemType === "pelt" || itemType === "circ") {
-        itemType = "helm";
-      }
-      if (itemType === "head" || itemType === "ashd") {
-        itemType = "shie";
-      }
-      return this.runewords.filter(
-        (obj) =>
-          obj.bases.includes(itemType) &&
-          this.item.props.sockets >= obj.sock_req
-      );
-    },
-    showRunewords() {
-      return this.item.props.rarity === "nmag";
-    },
+    ...mapGetters("items", ["getCurrentItem"]),
     itemTextClass() {
       let text = "nmag";
-      if (this.item.props.rarity === "uni") {
+      if (this.getCurrentItem.props.rarity === "uni") {
         text = "rw-uni";
       }
       return text;
-    },
-  },
-  methods: {
-    handleOutside() {
-      this.overlay = false;
     },
   },
 };
