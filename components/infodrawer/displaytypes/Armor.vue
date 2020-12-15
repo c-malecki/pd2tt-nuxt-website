@@ -253,6 +253,7 @@ export default {
   .NameImage {
     display: flex;
     flex-direction: column;
+    align-items: center;
     .ImageContainer {
       width: 150px;
       height: 150px;

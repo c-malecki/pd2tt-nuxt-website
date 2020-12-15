@@ -15,7 +15,10 @@
           Level Req: {{ getCurrentItem.props.level_req }}
         </li>
         <ul v-if="getCurrentItem.stats.length > 0" class="ItemStats">
-          <li v-for="stat in getCurrentItem.stats" :key="stat.code">
+          <li
+            v-for="(stat, idx) in getCurrentItem.stats"
+            :key="`${stat.code}-${idx}`"
+          >
             {{ stat.display }}
           </li>
         </ul>
@@ -68,6 +71,7 @@ export default {
   .NameImage {
     display: flex;
     flex-direction: column;
+    align-items: center;
     .ImageContainer {
       width: 150px;
       height: 150px;
