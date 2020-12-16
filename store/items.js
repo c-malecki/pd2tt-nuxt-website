@@ -42,6 +42,12 @@ export const mutations = {
   },
 };
 
+export const actions = {
+  setCurrent({ commit }, item) {
+    commit("currentItem", item);
+  },
+};
+
 export const getters = {
   getItemAndUp: (state) => {
     const item = state.current;
@@ -100,6 +106,7 @@ export const getters = {
       }
     }
     if (tier === "elt") {
+      exceptional = { name: "old" };
       elite = item;
     }
     return {

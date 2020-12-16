@@ -26,6 +26,7 @@
               item-text="name"
               item-value="code"
               clearable
+              :disabled="disableTier"
             />
           </v-col>
         </v-row>
@@ -204,11 +205,36 @@ export default {
     getMinSockVal() {
       return this.formValues.socketMin;
     },
+    getTypeSelection() {
+      return this.formValues.type;
+    },
+    disableTier() {
+      const { type } = this.formValues;
+      if (
+        type === "ring" ||
+        type === "amul" ||
+        type === "jewl" ||
+        type === "circ"
+      ) {
+        return true;
+      }
+      return false;
+    },
   },
   watch: {
     getMinSockVal(val) {
       if (val > this.formValues.socketMax) {
         this.formValues.socketMax = val;
+      }
+    },
+    getTypeSelection(val) {
+      if (
+        val === "ring" ||
+        val === "amul" ||
+        val === "jewl" ||
+        val === "circ"
+      ) {
+        this.formValues.tier = undefined;
       }
     },
   },

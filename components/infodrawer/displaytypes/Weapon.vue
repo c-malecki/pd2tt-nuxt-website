@@ -4,25 +4,28 @@
       <div class="ButtonRow">
         <v-btn
           v-if="getItemAndUp.normal && getItemAndUp.rarity !== `nmag`"
-          @click="setTier = `norm`"
+          @click="getTier = `norm`"
         >
           <span>Normal</span>
           <v-icon>
             {{
-              setTier === "norm"
+              isCurrentTier === "norm"
                 ? "mdi-checkbox-marked"
                 : "mdi-checkbox-blank-outline"
             }}
           </v-icon>
         </v-btn>
         <v-btn
-          v-if="getItemAndUp.exceptional && getItemAndUp.rarity !== `nmag`"
-          @click="setTier = `exc`"
+          v-if="
+            getItemAndUp.exceptional.name !== `old` &&
+            getItemAndUp.rarity !== `nmag`
+          "
+          @click="getTier = `exc`"
         >
           <span>Exceptional</span>
           <v-icon>
             {{
-              setTier === "exc"
+              isCurrentTier === "exc"
                 ? "mdi-checkbox-marked"
                 : "mdi-checkbox-blank-outline"
             }}
@@ -30,19 +33,26 @@
         </v-btn>
         <v-btn
           v-if="getItemAndUp.elite && getItemAndUp.rarity !== `nmag`"
-          @click="setTier = `elt`"
+          @click="getTier = `elt`"
         >
           <span>Elite</span>
           <v-icon>
             {{
-              setTier === "elt"
+              isCurrentTier === "elt"
                 ? "mdi-checkbox-marked"
                 : "mdi-checkbox-blank-outline"
             }}
           </v-icon>
         </v-btn>
       </div>
-      <v-btn @click="isEthereal = !setEthereal">
+      <v-btn
+        v-if="
+          getTier.type !== `abow` &&
+          getTier.type !== `bow` &&
+          getTier.type !== `xbow`
+        "
+        @click="isEthereal = !setEthereal"
+      >
         <span>Ethereal</span>
         <v-icon>
           {{
@@ -52,43 +62,43 @@
       </v-btn>
     </div>
     <div class="NameImage">
-      <h5 :class="itemTextClass">{{ isTier.name }}</h5>
-      <span v-if="isTier.props.rarity !== `nmag`" class="ItemTier">{{
-        isTier.base_name
+      <h5 :class="itemTextClass">{{ getTier.name }}</h5>
+      <span v-if="getTier.props.rarity !== `nmag`" class="ItemTier">{{
+        getTier.base_name
       }}</span>
       <div class="ImageContainer">
-        <img :src="isTier.image" :alt="isTier.name" />
+        <img :src="getTier.image" :alt="getTier.name" />
       </div>
     </div>
     <v-col>
       <ul>
-        <li v-if="isTier.props.tier" class="ItemTier">
-          {{ isTier.props.tier | itemTier }}
+        <li v-if="getTier.props.tier" class="ItemTier">
+          {{ getTier.props.tier | itemTier }}
         </li>
         <li>Damage: {{ calcDamage.main }}</li>
-        <li v-if="isTier.damage.throw">Thrown: {{ calcDamage.throw }}</li>
-        <li v-if="isTier.damage.barb1h">
+        <li v-if="getTier.damage.throw">Thrown: {{ calcDamage.throw }}</li>
+        <li v-if="getTier.damage.barb1h">
           Barb One-Hand: {{ calcDamage.barb1h }}
         </li>
-        <li v-if="isTier.props.level_req > 0">
-          Level Req: {{ isTier.props.level_req }}
+        <li v-if="getTier.props.level_req > 0">
+          Level Req: {{ getTier.props.level_req }}
         </li>
-        <li v-if="isTier.props.str_req > 0">
-          Strength Req: {{ isTier.props.str_req }}
+        <li v-if="getTier.props.str_req > 0">
+          Strength Req: {{ getTier.props.str_req }}
         </li>
-        <li v-if="isTier.props.dex_req > 0">
-          Dexterity Req: {{ isTier.props.dex_req }}
+        <li v-if="getTier.props.dex_req > 0">
+          Dexterity Req: {{ getTier.props.dex_req }}
         </li>
-        <li v-if="isTier.props.durability > 0">
-          Durability: {{ isTier.props.durability }}
+        <li v-if="getTier.props.durability > 0">
+          Durability: {{ getTier.props.durability }}
         </li>
         <li class="ItemTier">
-          Max Sockets: {{ isTier.props.sockets ? isTier.props.sockets : 0 }}
+          Max Sockets: {{ getTier.props.sockets ? getTier.props.sockets : 0 }}
         </li>
-        <li>Speed: {{ isTier.props.speed }}</li>
-        <li>Range: {{ isTier.props.range }}</li>
-        <ul v-if="isTier.stats.length > 0" class="ItemStats">
-          <li v-for="(stat, idx) in isTier.stats" :key="`${stat.code}-${idx}`">
+        <li>Speed: {{ getTier.props.speed }}</li>
+        <li>Range: {{ getTier.props.range }}</li>
+        <ul v-if="getTier.stats.length > 0" class="ItemStats">
+          <li v-for="(stat, idx) in getTier.stats" :key="`${stat.code}-${idx}`">
             {{ stat.display }}
           </li>
         </ul>
@@ -134,12 +144,12 @@ export default {
   },
   data: () => ({
     setEthereal: false,
-    setTier: null,
+    isCurrentTier: null,
   }),
   computed: {
     ...mapGetters("items", ["getItemAndUp"]),
     getRunewords() {
-      let itemType = this.isTier.type;
+      let itemType = this.getTier.type;
       if (itemType === "1hswor" || itemType === "2hswor") {
         itemType = "swor";
       }
@@ -158,27 +168,27 @@ export default {
       return this.runewords.filter(
         (obj) =>
           obj.bases.includes(itemType) &&
-          this.isTier.props.sockets >= obj.props.sock_req
+          this.getTier.props.sockets >= obj.props.sock_req
       );
     },
     showRunewords() {
-      return this.isTier.props.rarity === "nmag";
+      return this.getTier.props.rarity === "nmag";
     },
     itemTextClass() {
       let text = "nmag";
-      if (this.isTier.props.rarity === "uni") {
+      if (this.getTier.props.rarity === "uni") {
         text = "rw-uni";
       }
       return text;
     },
     calcDamage() {
       // surely there is a better way to do this
-      const { has_barb_1h, throwable } = this.isTier.damage;
+      const { has_barb_1h, throwable } = this.getTier.damage;
       const isEth = this.isEthereal;
-      const ed = this.isTier.stats.filter((obj) => obj.code === "dmg%");
-      const mindmg = this.isTier.stats.filter((obj) => obj.code === "dmg-min");
-      const maxdmg = this.isTier.stats.filter((obj) => obj.code === "dmg-max");
-      const dmgnorm = this.isTier.stats.filter(
+      const ed = this.getTier.stats.filter((obj) => obj.code === "dmg%");
+      const mindmg = this.getTier.stats.filter((obj) => obj.code === "dmg-min");
+      const maxdmg = this.getTier.stats.filter((obj) => obj.code === "dmg-max");
+      const dmgnorm = this.getTier.stats.filter(
         (obj) => obj.code === "dmg-norm"
       );
       const edVal =
@@ -195,9 +205,9 @@ export default {
         dmgnorm.length > 0
           ? { min: dmgnorm[0].min, max: dmgnorm[0].max }
           : { min: 0, max: 0 };
-      const main = this.isTier.damage.main;
-      const thrown = throwable ? this.isTier.damage.throw : null;
-      const barb1h = has_barb_1h ? this.isTier.damage.barb1h : null;
+      const main = this.getTier.damage.main;
+      const thrown = throwable ? this.getTier.damage.throw : null;
+      const barb1h = has_barb_1h ? this.getTier.damage.barb1h : null;
       const dmgFormula = (dmg) => {
         if (dmg) {
           let min = dmg.min;
@@ -238,7 +248,7 @@ export default {
     isEthereal: {
       get() {
         if (
-          this.isTier.stats.filter((obj) => obj.code === "ethereal").length > 0
+          this.getTier.stats.filter((obj) => obj.code === "ethereal").length > 0
         ) {
           return true;
         }
@@ -248,31 +258,31 @@ export default {
         return (this.setEthereal = bool);
       },
     },
-    isTier: {
+    getTier: {
       get() {
-        if (this.setTier === "exc") {
+        if (this.isCurrentTier === "exc") {
           return this.getItemAndUp.exceptional;
         }
-        if (this.setTier === "elt") {
+        if (this.isCurrentTier === "elt") {
           return this.getItemAndUp.elite;
         }
         return this.getItemAndUp.baseItem;
       },
       set(tier) {
-        return (this.setTier = tier);
+        return (this.isCurrentTier = tier);
       },
     },
   },
   watch: {
-    isTier(newItem, oldItem) {
+    getTier(newItem, oldItem) {
       if (newItem.name !== oldItem.name) {
+        this.isCurrentTier = this.getItemAndUp.baseTier;
         this.setEthereal = false;
-        this.setTier = this.getItemAndUp.baseTier;
       }
     },
   },
   beforeMount() {
-    this.setTier = this.getItemAndUp.baseTier;
+    this.isCurrentTier = this.getItemAndUp.baseTier;
   },
 };
 </script>
