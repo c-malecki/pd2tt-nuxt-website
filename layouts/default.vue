@@ -57,10 +57,15 @@
         >
           <input type="hidden" name="cmd" value="_donations" />
           <input type="hidden" name="business" value="7UFBGK9Y84WK2" />
+          <input
+            type="hidden"
+            name="item_name"
+            value="Support the creation of PD2 tools or buy the dev a coffee :D"
+          />
           <input type="hidden" name="currency_code" value="USD" />
           <input
             type="image"
-            src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif"
+            src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif"
             border="0"
             name="submit"
             title="PayPal - The safer, easier way to pay online!"

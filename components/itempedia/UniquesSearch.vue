@@ -1,72 +1,87 @@
 <template>
-  <v-col>
+  <div>
     <div class="Itempedia-filter-container">
-      <v-form>
-        <v-row dense>
-          <v-col xs="12" sm="12" md="6" lg="3" xl="3">
-            <v-text-field v-model="formValues.name" label="Name" />
-          </v-col>
-        </v-row>
-        <v-row dense>
-          <v-col xs="12" sm="12" md="6" lg="3" xl="3">
-            <v-autocomplete
-              v-model="formValues.type"
-              :items="getTypes"
-              label="Type"
-              item-text="name"
-              item-value="code"
-              clearable
-            />
-          </v-col>
-          <v-col xs="12" sm="12" md="6" lg="3" xl="3">
-            <v-autocomplete
-              v-model="formValues.tier"
-              :items="getTiers"
-              label="Tier"
-              item-text="name"
-              item-value="code"
-              clearable
-              :disabled="disableTier"
-            />
-          </v-col>
-        </v-row>
-        <p>
-          (Note - Sockets are not based on corruptions currently. They use the
-          same max sockets as the corresponding base item.)
-        </p>
-        <v-row dense>
-          <v-col xs="12" sm="6" md="4" lg="2" xl="2">
-            <v-autocomplete
-              v-model="formValues.socketMin"
-              :items="formControl.sockets"
-              label="Sockets Min"
-              clearable
-            />
-          </v-col>
-          <v-col xs="12" sm="6" md="4" lg="2" xl="2">
-            <v-autocomplete
-              v-model="formValues.socketMax"
-              :items="calcSocketMax"
-              label="Sockets Max"
-              clearable
-            />
-          </v-col>
-        </v-row>
-        <v-row dense>
-          <v-col xs="12" sm="12" md="12" lg="6" xl="6">
-            <v-autocomplete
-              v-model="formValues.selectedStats"
-              :items="getItemStats"
-              item-text="display"
-              item-value="display"
-              label="Properties (Currently partial match)"
-              clearable
-              multiple
-              return-object
-            />
-          </v-col>
-        </v-row>
-      </v-form>
+      <div class="Itempedia-filter-row">
+        <div class="Input-Wrapper">
+          <v-text-field
+            v-model="formValues.name"
+            label="Name"
+            flat
+            dense
+            outlined
+            hide-details
+          />
+        </div>
+        <div class="Input-Wrapper">
+          <v-autocomplete
+            v-model="formValues.type"
+            :items="getTypes"
+            label="Type"
+            item-text="name"
+            item-value="code"
+            clearable
+            flat
+            dense
+            outlined
+            hide-details
+          />
+        </div>
+        <div class="Input-Wrapper">
+          <v-autocomplete
+            v-model="formValues.tier"
+            :items="getTiers"
+            label="Tier"
+            item-text="name"
+            item-value="code"
+            clearable
+            :disabled="disableTier"
+            flat
+            dense
+            outlined
+            hide-details
+          />
+        </div>
+        <div class="Input-Wrapper Sockets">
+          <v-autocomplete
+            v-model="formValues.socketMin"
+            :items="formControl.sockets"
+            label="Sockets Min"
+            clearable
+            flat
+            dense
+            outlined
+            hide-details
+          />
+        </div>
+        <div class="Input-Wrapper Sockets">
+          <v-autocomplete
+            v-model="formValues.socketMax"
+            :items="calcSocketMax"
+            label="Sockets Max"
+            clearable
+            flat
+            dense
+            outlined
+            hide-details
+          />
+        </div>
+        <div class="Input-Wrapper Properties">
+          <v-autocomplete
+            v-model="formValues.selectedStats"
+            :items="getItemStats"
+            item-text="display"
+            item-value="display"
+            label="Properties (Currently partial match)"
+            clearable
+            multiple
+            return-object
+            flat
+            dense
+            outlined
+            hide-details
+          />
+        </div>
+      </div>
     </div>
     <v-pagination
       v-model="getCurrentPage"
@@ -79,7 +94,7 @@
         :item="item"
       />
     </v-row>
-  </v-col>
+  </div>
 </template>
 
 <script>
@@ -241,4 +256,29 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.Itempedia-filter-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  .Itempedia-filter-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    .Input-Wrapper {
+      margin: 0.5rem;
+      width: 100%;
+      max-width: 330px;
+    }
+    .Sockets {
+      width: 100%;
+      max-width: 200px;
+    }
+    .Properties {
+      width: 100%;
+      max-width: 600px;
+    }
+  }
+}
+</style>
