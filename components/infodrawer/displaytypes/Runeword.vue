@@ -114,12 +114,11 @@ export default {
       return text;
     },
     getRuneImages() {
-      const { rune_recipe } = this.getCurrentItem.props;
+      const { rune_string } = this.getCurrentItem;
+      const split = rune_string.split(" ");
       let result = [];
-      for (let i = 0; i < rune_recipe.length; i++) {
-        const runeObj = this.getRunes.find(
-          (obj) => obj.code === rune_recipe[i]
-        );
+      for (let i = 0; i < split.length; i++) {
+        const runeObj = this.getRunes.find((obj) => obj.name === split[i]);
         result.push({
           ...runeObj,
           index: i,
