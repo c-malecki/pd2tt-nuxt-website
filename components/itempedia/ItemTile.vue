@@ -23,7 +23,7 @@ export default {
       if (string === "swor") {
         return "Swords";
       }
-      if (string === "shld") {
+      if (string === "shie") {
         return "Shields";
       }
       if (string === "axe") {
@@ -67,6 +67,9 @@ export default {
       }
       if (string === "helm") {
         return "Helms";
+      }
+      if (string === "ashd") {
+        return "Paladin Shield";
       }
     },
   },
@@ -127,7 +130,6 @@ export default {
     }
 
     ul {
-      margin-top: 1rem;
       list-style: none;
       padding-left: 0;
 

@@ -4,7 +4,7 @@
     "rune_string": "Ral Ort Tal",
     "group": "runeword",
     "bases": [
-      "shld"
+      "shie"
     ],
     "props": {
       "rune_recipe": [
@@ -1621,7 +1621,7 @@
     "rune_string": "Shael Eth",
     "group": "runeword",
     "bases": [
-      "shld"
+      "shie"
     ],
     "props": {
       "rune_recipe": [
@@ -3252,7 +3252,8 @@
     "bases": [
       "axe",
       "swor",
-      "pole"
+      "pole",
+      "spea"
     ],
     "props": {
       "rune_recipe": [
@@ -3490,7 +3491,8 @@
     "bases": [
       "axe",
       "pole",
-      "hamm"
+      "hamm",
+      "spea"
     ],
     "props": {
       "rune_recipe": [
@@ -4033,7 +4035,7 @@
     "rune_string": "Vex Ohm Ist Dol",
     "group": "runeword",
     "bases": [
-      "pala"
+      "ashd"
     ],
     "props": {
       "rune_recipe": [
@@ -5006,7 +5008,7 @@
     "rune_string": "Ko Ko Mal",
     "group": "runeword",
     "bases": [
-      "shld"
+      "shie"
     ],
     "props": {
       "rune_recipe": [
@@ -5397,7 +5399,7 @@
     "group": "runeword",
     "bases": [
       "swor",
-      "shld"
+      "shie"
     ],
     "props": {
       "rune_recipe": [
@@ -5589,7 +5591,7 @@
     "rune_string": "Eth Lum",
     "group": "runeword",
     "bases": [
-      "shld"
+      "shie"
     ],
     "props": {
       "rune_recipe": [
@@ -7102,7 +7104,7 @@
     "group": "runeword",
     "bases": [
       "tors",
-      "shld"
+      "shie"
     ],
     "props": {
       "rune_recipe": [
@@ -7267,7 +7269,7 @@
     "group": "runeword",
     "bases": [
       "helm",
-      "shld"
+      "shie"
     ],
     "props": {
       "rune_recipe": [
@@ -8703,7 +8705,7 @@
     "group": "runeword",
     "bases": [
       "weap",
-      "shld"
+      "shie"
     ],
     "props": {
       "rune_recipe": [

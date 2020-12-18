@@ -54,7 +54,7 @@ export default {
       if (string === "swor") {
         return "Swords";
       }
-      if (string === "shld") {
+      if (string === "shie") {
         return "Shields";
       }
       if (string === "axe") {
@@ -98,6 +98,9 @@ export default {
       }
       if (string === "helm") {
         return "Helms";
+      }
+      if (string === "ashd") {
+        return "Paladin Shield";
       }
     },
   },

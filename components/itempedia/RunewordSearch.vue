@@ -16,7 +16,7 @@
         <div class="Input-Wrapper">
           <v-autocomplete
             v-model="formValues.type"
-            :items="getTypes"
+            :items="getRwTypes"
             label="Type"
             item-text="name"
             item-value="code"
@@ -125,7 +125,7 @@ export default {
   computed: {
     ...mapGetters("items", [
       "getBases",
-      "getTypes",
+      "getRwTypes",
       "getRunes",
       "getItemStats",
       "getRunewords",
@@ -163,7 +163,9 @@ export default {
       }
 
       if (type !== undefined) {
-        let fixType = "";
+        let fixType = type;
+        let isAllWeapon = false;
+        let isMeleeWeapon = false;
         if (type === "1hswor" || type === "2hswor") {
           fixType = "swor";
         }
@@ -182,10 +184,35 @@ export default {
         if (type === "phlm" || type === "pelt" || type === "circ") {
           fixType = "helm";
         }
-        if (type === "head" || type === "ashd") {
+        if (type === "head") {
           fixType = "shie";
         }
-        items = items.filter((obj) => obj.bases.includes(fixType));
+        if (
+          fixType !== "helm" &&
+          fixType !== "shie" &&
+          fixType !== "ashd" &&
+          fixType !== "tors"
+        ) {
+          isAllWeapon = true;
+          if (fixType !== "miss") {
+            isMeleeWeapon = true;
+          }
+        }
+
+        if (isAllWeapon && !isMeleeWeapon) {
+          items = items.filter(
+            (obj) => obj.bases.includes(fixType) || obj.bases.includes("weap")
+          );
+        } else if (isAllWeapon && isMeleeWeapon) {
+          items = items.filter(
+            (obj) =>
+              obj.bases.includes(fixType) ||
+              obj.bases.includes("mele") ||
+              obj.bases.includes("weap")
+          );
+        } else {
+          items = items.filter((obj) => obj.bases.includes(fixType));
+        }
       }
       if (socketMin !== undefined) {
         items = items.filter(

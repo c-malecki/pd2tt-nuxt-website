@@ -152,4 +152,26 @@ export const getters = {
       };
     });
   },
+  getRwTypes: (state) => {
+    const allTypes = [...state.types.armors, ...state.types.weapons];
+    const rwTypes = allTypes.filter(
+      (obj) =>
+        obj.type_code !== "tkni" &&
+        obj.type_code !== "taxe" &&
+        obj.type_code !== "jave" &&
+        obj.type_code !== "ajav" &&
+        obj.type_code !== "glov" &&
+        obj.type_code !== "boot" &&
+        obj.type_code !== "belt"
+    );
+    const sorted = rwTypes.sort((a, b) =>
+      a.type_name.localeCompare(b.type_name)
+    );
+    return sorted.map((obj) => {
+      return {
+        name: obj.type_name,
+        code: obj.type_code,
+      };
+    });
+  },
 };
