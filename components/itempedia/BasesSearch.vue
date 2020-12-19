@@ -3,6 +3,16 @@
     <div class="Itempedia-filter-container">
       <div class="Itempedia-filter-row">
         <div class="Input-Wrapper">
+          <v-text-field
+            v-model="formValues.name"
+            label="Name"
+            flat
+            dense
+            outlined
+            hide-details
+          />
+        </div>
+        <div class="Input-Wrapper">
           <v-autocomplete
             v-model="formValues.type"
             :items="getTypes"
@@ -78,6 +88,7 @@ export default {
   data: () => ({
     page: 1,
     formValues: {
+      name: "",
       type: undefined,
       tier: undefined,
       socketMin: undefined,
@@ -98,7 +109,10 @@ export default {
     },
     filteredItems() {
       let items = this.getBases;
-      const { type, tier, socketMin, socketMax } = this.formValues;
+      const { name, type, tier, socketMin, socketMax } = this.formValues;
+      items = items.filter((obj) =>
+        obj.name.toLowerCase().includes(name.toLowerCase())
+      );
       if (type !== undefined) {
         items = items.filter((obj) => obj.type === type);
       }

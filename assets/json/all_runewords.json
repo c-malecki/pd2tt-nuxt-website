@@ -5880,16 +5880,6 @@
       {
         "code": "oskill",
         "name": "item_nonclassskill",
-        "skill": "Iron Golem",
-        "display": "+8 to Iron Golem",
-        "min": 8,
-        "max": 8,
-        "order": 81,
-        "sub_stats": []
-      },
-      {
-        "code": "oskill",
-        "name": "item_nonclassskill",
         "skill": "Heart of Wolverine",
         "display": "+8 to Heart of Wolverine",
         "min": 8,
