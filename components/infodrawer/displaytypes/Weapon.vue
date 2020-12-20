@@ -62,9 +62,13 @@
       </v-btn>
     </div>
     <div class="NameImage">
+      <h5 v-if="getAppliedRuneword" class="rw-uni">{{ getTier.rw_name }}</h5>
       <h5 :class="itemTextClass">{{ getTier.name }}</h5>
       <span v-if="getTier.props.rarity !== `nmag`" class="ItemTier">{{
         getTier.base_name
+      }}</span>
+      <span v-if="getAppliedRuneword" class="ItemTier">{{
+        getTier.rune_string
       }}</span>
       <div class="ImageContainer">
         <img :src="getTier.image" :alt="getTier.name" />
@@ -103,21 +107,21 @@
           </li>
         </ul>
       </ul>
-      <v-expansion-panels
+      <v-autocomplete
         v-if="showRunewords"
-        :style="{ maxHeight: `300px`, overflowY: `scroll`, marginTop: `1rem` }"
-      >
-        <v-expansion-panel>
-          <v-expansion-panel-header> Runewords </v-expansion-panel-header>
-          <v-expansion-panel-content
-            v-for="rw in getRunewords"
-            :key="rw.name"
-            class="rw-uni"
-          >
-            {{ rw.name }}
-          </v-expansion-panel-content>
-        </v-expansion-panel>
-      </v-expansion-panels>
+        v-model="hasRuneword"
+        class="mt-2"
+        label="Runeword"
+        :items="getRunewords"
+        item-text="name"
+        clearable
+        return-object
+        flat
+        dense
+        outlined
+        hide-details
+        @change="handleApplyRuneword($event)"
+      />
     </v-col>
   </div>
 </template>
@@ -145,9 +149,19 @@ export default {
   data: () => ({
     setEthereal: false,
     isCurrentTier: null,
+    hasRuneword: null,
   }),
+  methods: {
+    handleApplyRuneword(rwObj) {
+      if (rwObj === undefined) {
+        this.$store.commit("items/setRuneword", null);
+      } else {
+        this.$store.commit("items/setRuneword", rwObj);
+      }
+    },
+  },
   computed: {
-    ...mapGetters("items", ["getItemAndUp"]),
+    ...mapGetters("items", ["getItemAndUp", "getAppliedRuneword"]),
     getRunewords() {
       let itemType = this.getTier.type;
       if (itemType === "1hswor" || itemType === "2hswor") {
@@ -260,10 +274,13 @@ export default {
     },
     getTier: {
       get() {
-        if (this.isCurrentTier === "exc") {
+        if (this.getAppliedRuneword) {
+          return this.getAppliedRuneword;
+        }
+        if (!this.getAppliedRuneword && this.isCurrentTier === "exc") {
           return this.getItemAndUp.exceptional;
         }
-        if (this.isCurrentTier === "elt") {
+        if (!this.getAppliedRuneword && this.isCurrentTier === "elt") {
           return this.getItemAndUp.elite;
         }
         return this.getItemAndUp.baseItem;
@@ -276,6 +293,7 @@ export default {
   watch: {
     getTier(newItem, oldItem) {
       if (newItem.name !== oldItem.name) {
+        this.hasRuneword = null;
         this.isCurrentTier = this.getItemAndUp.baseTier;
         this.setEthereal = false;
       }

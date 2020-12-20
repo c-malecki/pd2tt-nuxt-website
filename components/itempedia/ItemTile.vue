@@ -89,9 +89,10 @@ export default {
   },
   methods: {
     openInfoDrawer(item) {
-      this.$store
-        .dispatch("items/setCurrent", item)
-        .then(() => this.$store.commit("openDrawer", "item"));
+      this.$store.dispatch("items/setCurrent", item).then(() => {
+        this.$store.commit("items/setRuneword", null);
+        this.$store.commit("openDrawer", "item");
+      });
     },
   },
 };

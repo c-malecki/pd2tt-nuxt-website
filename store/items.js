@@ -12,6 +12,7 @@ import mapStats from "../assets/json/map_stats.json";
 export const state = () => ({
   current: {
     item: null,
+    runeword: null,
   },
   stats: {
     itemStats: itemStats,
@@ -38,7 +39,10 @@ export const state = () => ({
 
 export const mutations = {
   currentItem(state, payload) {
-    state.current = payload;
+    state.current.item = payload;
+  },
+  setRuneword(state, payload) {
+    state.current.runeword = payload;
   },
 };
 
@@ -49,8 +53,90 @@ export const actions = {
 };
 
 export const getters = {
+  getAppliedRuneword: (state) => {
+    const { item, runeword } = state.current;
+    if (runeword) {
+      let itemTypeForRw;
+      if (
+        item.type === "shie" ||
+        item.type === "ashd" ||
+        item.type === "head"
+      ) {
+        itemTypeForRw = "Shields";
+      } else if (
+        item.type === "helm" ||
+        item.type === "circ" ||
+        item.type === "pelt" ||
+        item.type === "phlm" ||
+        item.type === "tors"
+      ) {
+        itemTypeForRw = "Armors/Helms";
+      } else {
+        itemTypeForRw = "Weapons";
+      }
+      const socketStats = runeword.sockets.filter(
+        (stat) => stat.group === itemTypeForRw
+      );
+      const rwHasUndead = runeword.stats.filter(
+        (stat) => stat.code === "dmg-undead"
+      );
+      const itemHasUndead = item.stats.filter(
+        (stat) => stat.code === "dmg-undead"
+      );
+      let finalUndead = null;
+      if (rwHasUndead.length > 0 && itemHasUndead > 0) {
+        let min = rwHasUndead[0].min + itemHasUndead[0].min;
+        let max = rwHasUndead[0].max + itemHasUndead[0].max;
+        finalUndead = {
+          code: "dmg-undead",
+          name: "item_undeaddamage_percent",
+          display:
+            min !== max
+              ? `+${min}-${max}% Damage to Undead`
+              : `+${min}% Damage to Undead`,
+          min: min,
+          max: max,
+          order: 108,
+          sub_stats: [],
+        };
+      } else {
+        finalUndead =
+          rwHasUndead.length > 0
+            ? rwHasUndead[0]
+            : itemHasUndead.length > 0
+            ? itemHasUndead[0]
+            : null;
+      }
+      const itemFilterUd = item.stats.filter(
+        (stat) => stat.code !== "dmg-undead"
+      );
+      const rwFilterUd = runeword.stats.filter(
+        (stat) => stat.code !== "dmg-undead"
+      );
+      const allStats = [...socketStats, ...itemFilterUd, ...rwFilterUd];
+      if (finalUndead) {
+        allStats.push(finalUndead);
+      }
+
+      return {
+        ...item,
+        rw_name: runeword.name,
+        rune_string: runeword.rune_string,
+        props: {
+          ...item.props,
+          rune_recipe: runeword.props.rune_recipe,
+          level_req:
+            item.props.level_req > runeword.props.level_req
+              ? item.props.level_req
+              : runeword.props.level_req,
+        },
+        stats: allStats,
+      };
+    }
+    return null;
+  },
   getItemAndUp: (state) => {
-    const item = state.current;
+    const { item } = state.current;
     const { tier, upgrade, rarity } = item.props;
     const allBases = [...state.bases.weapons, ...state.bases.armors];
     const baseTier = tier;
@@ -119,7 +205,7 @@ export const getters = {
     };
   },
   getCurrentItem: (state) => {
-    return state.current;
+    return state.current.item;
   },
   getTiers: (state) => {
     return state.tiers;
