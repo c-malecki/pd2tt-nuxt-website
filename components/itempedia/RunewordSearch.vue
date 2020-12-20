@@ -175,7 +175,7 @@ export default {
         if (type === "h2h2") {
           fixType = "h2h";
         }
-        if (type === "bow" || type === "xbox" || type === "abow") {
+        if (type === "bow" || type === "xbow" || type === "abow") {
           fixType = "miss";
         }
         if (type === "aspe") {

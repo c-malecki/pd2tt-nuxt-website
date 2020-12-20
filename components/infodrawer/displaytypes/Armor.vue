@@ -156,11 +156,21 @@ export default {
       if (itemType === "head" || itemType === "ashd") {
         itemType = "shie";
       }
-      return this.runewords.filter(
-        (obj) =>
-          obj.bases.includes(itemType) &&
-          this.getTier.props.sockets >= obj.props.sock_req
-      );
+      let results;
+      if (this.getTier.type === "ashd") {
+        results = this.runewords.filter(
+          (obj) =>
+            (obj.bases.includes(itemType) || obj.bases.includes("ashd")) &&
+            this.getTier.props.sockets >= obj.props.sock_req
+        );
+      } else {
+        results = this.runewords.filter(
+          (obj) =>
+            obj.bases.includes(itemType) &&
+            this.getTier.props.sockets >= obj.props.sock_req
+        );
+      }
+      return results;
     },
     showRunewords() {
       return this.getTier.props.rarity === "nmag";

@@ -163,27 +163,48 @@ export default {
   computed: {
     ...mapGetters("items", ["getItemAndUp", "getAppliedRuneword"]),
     getRunewords() {
-      let itemType = this.getTier.type;
-      if (itemType === "1hswor" || itemType === "2hswor") {
-        itemType = "swor";
+      let type = this.getTier.type;
+      let fixType = this.getTier.type;
+      let isMeleeWeapon = false;
+      if (type === "1hswor" || type === "2hswor") {
+        fixType = "swor";
       }
-      if (itemType === "1haxe" || itemType === "2haxe") {
-        itemType = "axe";
+      if (type === "1haxe" || type === "2haxe") {
+        fixType = "axe";
       }
-      if (itemType === "h2h2") {
-        itemType = "h2h";
+      if (type === "h2h2") {
+        fixType = "h2h";
       }
-      if (itemType === "bow" || itemType === "xbox" || itemType === "abow") {
-        itemType = "miss";
+      if (type === "bow" || type === "xbow" || type === "abow") {
+        fixType = "miss";
       }
-      if (itemType === "aspe") {
-        itemType = "spea";
+      if (type === "aspe") {
+        fixType = "spea";
       }
-      return this.runewords.filter(
-        (obj) =>
-          obj.bases.includes(itemType) &&
-          this.getTier.props.sockets >= obj.props.sock_req
-      );
+      if (type === "phlm" || type === "pelt" || type === "circ") {
+        fixType = "helm";
+      }
+      if (fixType !== "miss") {
+        isMeleeWeapon = true;
+      }
+      let results;
+      if (isMeleeWeapon) {
+        results = this.runewords.filter(
+          (obj) =>
+            (obj.bases.includes(fixType) ||
+              obj.bases.includes("mele") ||
+              obj.bases.includes("weap")) &&
+            this.getTier.props.sockets >= obj.props.sock_req
+        );
+      } else {
+        results = this.runewords.filter(
+          (obj) =>
+            (obj.bases.includes(fixType) || obj.bases.includes("weap")) &&
+            this.getTier.props.sockets >= obj.props.sock_req
+        );
+      }
+
+      return results;
     },
     showRunewords() {
       return this.getTier.props.rarity === "nmag";

@@ -50,8 +50,10 @@ export default {
         "spea",
         "h2h",
         "h2h2",
+        "weap",
+        "mele",
       ];
-      const armorTypes = ["shie", "tors", "helm"];
+      const armorTypes = ["shie", "tors", "helm", "ashd"];
       let result = [];
       if (this.data.group === "weapon") {
         result = runewords.filter((obj) => {
