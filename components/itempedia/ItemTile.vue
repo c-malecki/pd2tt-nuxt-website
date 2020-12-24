@@ -1,5 +1,8 @@
 <template>
-  <div class="ItemDisplay-container" @click="openInfoDrawer(item)">
+  <div
+    :class="`ItemDisplay-container ${tileBorder}`"
+    @click="openInfoDrawer(item)"
+  >
     <h5 :class="itemTextClass">{{ item.name }}</h5>
     <img v-if="item.group !== `runeword`" :src="item.image" :alt="item.name" />
     <div v-if="item.group === `runeword`" class="rw-props">
@@ -86,6 +89,13 @@ export default {
       }
       return text;
     },
+    tileBorder() {
+      let borderClass = "border-nmag";
+      if (this.item.props.rarity === "uni" || this.item.group === "runeword") {
+        borderClass = "border-rw-uni";
+      }
+      return borderClass;
+    },
   },
   methods: {
     openInfoDrawer(item) {
@@ -107,7 +117,8 @@ export default {
   height: 170px;
   overflow: hidden;
   margin: 0.5rem;
-  border: 1px solid white;
+  border-radius: 0.5rem;
+  background-color: $dark-bg;
   cursor: pointer;
 
   h5 {
@@ -154,5 +165,11 @@ export default {
       background-color: rgb(30, 30, 30);
     }
   }
+}
+.border-nmag {
+  border: 1px solid #ffffff88;
+}
+.border-rw-uni {
+  border: 1px solid #a5926393;
 }
 </style>

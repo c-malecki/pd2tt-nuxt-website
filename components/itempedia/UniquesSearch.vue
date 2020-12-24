@@ -82,11 +82,11 @@
           />
         </div>
       </div>
+      <v-pagination
+        v-model="getCurrentPage"
+        :length="getPageTotal"
+      ></v-pagination>
     </div>
-    <v-pagination
-      v-model="getCurrentPage"
-      :length="getPageTotal"
-    ></v-pagination>
     <v-row align="center" justify="center">
       <ItemTile
         v-for="(item, idx) in paginateItems"
@@ -260,7 +260,9 @@ export default {
 .Itempedia-filter-container {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  background-color: $dark-bg;
   .Itempedia-filter-row {
     display: flex;
     flex-direction: row;

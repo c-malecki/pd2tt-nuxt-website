@@ -1,44 +1,92 @@
 <template>
-  <v-row justify="center" align="center">
-    <div class="Banner" />
-    <div class="PlaceholderMessage">
+  <div class="page-content">
+    <div class="banner" />
+    <div class="about-pd2tt">
+      <h2>{{ `About PD2 Tools&Tech` }}</h2>
       <p>
-        Heya all. The revamp for the site is still very much in development, but
-        there have already been some big improvements to the Itempedia. Plenty
-        more still to come. Enjoy! :D
+        PD2TT's main goal is to bring Diablo 2 tools and data into the modern
+        era, with a particular focus on
+        <a
+          href="https://www.projectdiablo2.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Project Diablo 2</a
+        >. As much as we love all of the classics like Arreat Summit and Amazon
+        Basin, we feel it's time to provide a more centralized hub for relevant
+        D2 information that has been integrated with the changes and updates
+        made in Project Diablo 2.
         <br />
         <br />
-        - Meeps
+        We strive for accuracy, useability, and tools with features that have
+        never been produced in the 20+ year life span of D2 and D2: LoD. With
+        the continual development of the base game and amazing mod the Project
+        Diablo 2 team has been crafting, we hope to give back to the community a
+        one-stop shop companion tool suite to continue enriching the dedicated
+        D2 player's experience while adding to the longevity of the ARPG
+        classic.
       </p>
     </div>
-  </v-row>
+    <div class="feature-spotlight">
+      <h2>PD2TT Tools</h2>
+      <FeatureShowcase />
+    </div>
+  </div>
 </template>
 
 <script>
+import FeatureShowcase from "../components/feature-showcase/FeatureShowcase";
 export default {
   name: "LandingPage",
+  components: {
+    FeatureShowcase,
+  },
+  head: () => ({
+    title: "An unofficial tool suite for PD2",
+    meta: [
+      {
+        hid: "description",
+        name: "description",
+        content: "Modern tools for D2 - An unofficial tool suite for PD2",
+      },
+    ],
+  }),
 };
 </script>
 
 <style lang="scss" scoped>
-.Banner {
-  position: absolute;
-  width: 100%;
-  height: 26rem;
-  background: url(https://www.wallpaperflare.com/static/809/247/598/fantasy-art-artwork-battle-diablo-wallpaper.jpg)
-    no-repeat center / cover;
-  top: 0;
+.about-pd2tt {
+  position: relative;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background-color: $dark-bg;
+  margin: 0 auto;
+
+  a {
+    text-decoration: none;
+  }
+
+  h2 {
+    color: $uni-text;
+    margin-bottom: 0.5rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    @media (max-width: 768px) {
+      font-size: inherit;
+    }
+  }
 }
 
-.PlaceholderMessage {
+.feature-spotlight {
   position: relative;
-  max-width: 480px;
-  margin: auto;
-  font-size: 1.2rem;
-  top: 8rem;
-  background-color: rgba(0, 0, 0, 0.8);
-  p {
-    padding: 1rem;
+  border-radius: 0.5rem;
+  background-color: $dark-bg;
+  margin: 1rem auto 0 auto;
+
+  h2 {
+    margin: 0.5rem;
+    color: $uni-text;
   }
 }
 </style>

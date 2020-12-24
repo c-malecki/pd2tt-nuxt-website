@@ -129,6 +129,11 @@ export default {
       return width;
     },
   },
+  watch: {
+    $route(newRoute) {
+      this.active = this.links.find((obj) => obj.path === newRoute.path).id;
+    },
+  },
   beforeMount() {
     this.active =
       this.links.find((obj) => obj.path === this.$route.path).id || 0;
@@ -137,6 +142,11 @@ export default {
 </script>
 
 <style lang="scss">
+.theme--dark.v-app-bar.v-toolbar.v-sheet,
+.v-sheet.v-footer {
+  background-color: $dark-bg;
+}
+
 .LogoLink {
   margin-right: 3rem;
 }

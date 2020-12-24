@@ -1,2 +1,19 @@
 @import "./variables.scss";
 @import "./util-classes.scss";
+
+.theme--dark.v-application {
+  background-color: rgb(190, 190, 190);
+}
+
+.v-main__wrap {
+  background: url("https://pd2tt-assets.s3.amazonaws.com/colored.jpg") center /
+    cover no-repeat;
+  background-attachment: fixed;
+  background-position-y: 5%;
+
+  @media (max-width: 768px) {
+    background: url("https://pd2tt-assets.s3.amazonaws.com/colored.jpg") center /
+      cover no-repeat;
+    background-attachment: inherit;
+  }
+}

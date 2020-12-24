@@ -6,7 +6,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    titleTemplate: "%s - PD2 Tools&Tech",
+    titleTemplate: "PD2TT - %s",
     title: "PD2 Tools&Tech",
     meta: [
       { charset: "utf-8" },

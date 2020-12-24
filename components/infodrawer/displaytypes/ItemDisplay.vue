@@ -1,5 +1,5 @@
 <template>
-  <div class="ItemDisplay-container">
+  <div :class="`ItemDisplay-container ${tileBorder}`">
     <component :is="getGroup" :runewords="filterRunewords"></component>
   </div>
 </template>
@@ -31,6 +31,13 @@ export default {
         component = Runeword;
       }
       return component;
+    },
+    tileBorder() {
+      let borderClass = "border-nmag";
+      if (this.data.props.rarity === "uni" || this.data.group === "runeword") {
+        borderClass = "border-rw-uni";
+      }
+      return borderClass;
     },
     filterRunewords() {
       const runewords = this.getRunewords;
@@ -82,7 +89,14 @@ export default {
 <style lang="scss" scoped>
 .ItemDisplay-container {
   margin: 0.5rem;
-  border: 1px solid white;
+  border-radius: 0.5rem;
   cursor: pointer;
+  overflow: hidden;
+}
+.border-nmag {
+  border: 1px solid #ffffff88;
+}
+.border-rw-uni {
+  border: 1px solid #a5926393;
 }
 </style>

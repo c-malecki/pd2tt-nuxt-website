@@ -1,9 +1,8 @@
 <template>
-  <v-col>
-    <h1>Itempedia</h1>
+  <div class="page-content">
     <CategoryTabs @changeCat="handleChangeCat" />
     <component :is="displaySearchCat" />
-  </v-col>
+  </div>
 </template>
 
 <script>
@@ -39,7 +38,14 @@ export default {
       this.selected = id;
     },
   },
+  head: () => ({
+    title: "Itempedia",
+  }),
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.page-content {
+  background-color: $ui-bg;
+}
+</style>
