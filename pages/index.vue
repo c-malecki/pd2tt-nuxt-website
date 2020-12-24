@@ -12,18 +12,18 @@
           rel="noopener noreferrer"
           >Project Diablo 2</a
         >. As much as we love all of the classics like Arreat Summit and Amazon
-        Basin, we feel it's time to provide a more centralized hub for relevant
-        D2 information that has been integrated with the changes and updates
-        made in Project Diablo 2.
+        Basin, PD2TT feels it's time to provide a more centralized hub for
+        relevant D2 information that has been integrated with the changes and
+        updates in Project Diablo 2.
         <br />
         <br />
-        We strive for accuracy, useability, and tools with features that have
-        never been produced in the 20+ year life span of D2 and D2: LoD. With
-        the continual development of the base game and amazing mod the Project
-        Diablo 2 team has been crafting, we hope to give back to the community a
-        one-stop shop companion tool suite to continue enriching the dedicated
-        D2 player's experience while adding to the longevity of the ARPG
-        classic.
+        We strive for accuracy and useability in creating tools with features
+        that have never existed in the 20+ year life span of D2 and D2: LoD.
+        With the continual development of the base game and amazing mod the
+        Project Diablo 2 team has been crafting, we hope to give back to the
+        community a one-stop shop companion tool suite to enrich the dedicated
+        D2 player's experience while contributing to the longevity of an ARPG
+        masterpiece.
       </p>
     </div>
     <div class="feature-spotlight">
