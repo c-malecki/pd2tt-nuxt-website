@@ -2,7 +2,7 @@
   <v-app dark>
     <v-app-bar fixed app>
       <NuxtLink to="/" class="LogoLink">
-        <v-img src="/logo.png" max-height="80" max-width="120" />
+        <v-img src="/nobg-logo-sm.png" max-height="90" max-width="90" />
       </NuxtLink>
       <v-tabs v-model="active" grow class="hidden-sm-and-down">
         <NuxtLink
@@ -86,6 +86,7 @@
 
 <script>
 import DrawerContent from "../components/infodrawer/DrawerContent";
+
 export default {
   name: "Root",
   components: {

@@ -17,7 +17,7 @@
         updates in Project Diablo 2.
         <br />
         <br />
-        We strive for accuracy and useability in creating tools with features
+        We strive for accuracy and usability in creating tools with features
         that have never existed in the 20+ year life span of D2 and D2: LoD.
         With the continual development of the base game and amazing mod the
         Project Diablo 2 team has been crafting, we hope to give back to the
@@ -31,14 +31,44 @@
       <FeatureShowcase />
     </div>
   </div>
+  <!-- <pre></pre> -->
 </template>
 
 <script>
+import armortypes from "../assets/json/armor_types.json";
+import weapontypes from "../assets/json/weapon_types.json";
+import weaponbases from "../assets/json/weapon_bases.json";
+import armorbases from "../assets/json/armor_bases.json";
 import FeatureShowcase from "../components/feature-showcase/FeatureShowcase";
 export default {
   name: "LandingPage",
   components: {
     FeatureShowcase,
+  },
+  computed: {
+    remap() {
+      const allTypes = [...armortypes, ...weapontypes];
+      const allBases = [...armorbases, ...weaponbases];
+      let result;
+      for (let i = 0; i < allTypes.length; i++) {
+        const bases = allTypes[i].bases;
+        let newType = {
+          type_name: allTypes[i].type_name,
+          type_code: allTypes[i].type_code,
+        };
+        bases.forEach((obj) => {
+          const image = allBases.find((base) => base.name === obj.item_name)
+            .image;
+
+          newType = {
+            ...newType,
+            image: image,
+          };
+        });
+        result.push(newType);
+      }
+      return result;
+    },
   },
   head: () => ({
     title: "An unofficial tool suite for PD2",
